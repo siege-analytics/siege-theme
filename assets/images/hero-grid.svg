@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none">
+  <rect width="1200" height="600" fill="#0c0c0c"/>
+
+  <!-- Grid -->
+  <defs>
+    <pattern id="heroGrid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#141414" stroke-width="0.5"/>
+    </pattern>
+    <linearGradient id="fadeBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0c0c0c" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0c0c0c" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="fadeRight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0.7" stop-color="#0c0c0c" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0c0c0c" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#heroGrid)"/>
+
+  <!-- Topographic-style contour lines — subtle geographic reference -->
+  <ellipse cx="900" cy="300" rx="300" ry="200" stroke="#1a1a1a" stroke-width="0.5" fill="none"/>
+  <ellipse cx="900" cy="300" rx="240" ry="160" stroke="#1a1a1a" stroke-width="0.5" fill="none"/>
+  <ellipse cx="900" cy="300" rx="180" ry="120" stroke="#1a1a1a" stroke-width="0.5" fill="none"/>
+  <ellipse cx="900" cy="300" rx="120" ry="80" stroke="#1a1a1a" stroke-width="0.5" fill="none"/>
+  <ellipse cx="900" cy="300" rx="60" ry="40" stroke="#1e1e1e" stroke-width="0.5" fill="none"/>
+
+  <!-- Single green accent contour -->
+  <ellipse cx="900" cy="300" rx="150" ry="100" stroke="#97C148" stroke-width="0.5" fill="none" opacity="0.15"/>
+
+  <!-- Fade edges -->
+  <rect width="1200" height="600" fill="url(#fadeBottom)"/>
+  <rect width="1200" height="600" fill="url(#fadeRight)"/>
+</svg>

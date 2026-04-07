@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#0c0c0c"/>
+
+  <!-- Subtle grid pattern -->
+  <defs>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Corner brackets -->
+  <path d="M40 80V40H80" stroke="#97C148" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+  <path d="M1120 40H1160V80" stroke="#97C148" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+  <path d="M1160 550V590H1120" stroke="#97C148" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+  <path d="M80 590H40V550" stroke="#97C148" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+
+  <!-- Crosshair mark -->
+  <g transform="translate(120, 250)">
+    <rect x="0" y="28" width="64" height="3" rx="1.5" fill="#97C148"/>
+    <rect x="28" y="0" width="3" height="64" rx="1.5" fill="#97C148"/>
+    <circle cx="30" cy="30" r="16" stroke="#97C148" stroke-width="2" fill="none"/>
+    <circle cx="30" cy="30" r="5" fill="#97C148"/>
+  </g>
+
+  <!-- Text -->
+  <text x="210" y="275" font-family="Inter, -apple-system, sans-serif" font-size="64" font-weight="800" letter-spacing="-0.03em" fill="#97C148">SIEGE</text>
+  <text x="210" y="310" font-family="Inter, -apple-system, sans-serif" font-size="28" font-weight="300" letter-spacing="0.1em" fill="#e0e0e0">ANALYTICS</text>
+
+  <!-- Tagline -->
+  <text x="210" y="380" font-family="Inter, -apple-system, sans-serif" font-size="22" font-weight="400" fill="#999999">Where-first data science &amp; geospatial engineering</text>
+
+  <!-- Bottom data readout -->
+  <text x="120" y="540" font-family="'JetBrains Mono', monospace" font-size="13" fill="#666666" letter-spacing="0.05em">AUSTIN, TX · SIEGEANALYTICS.COM · EST. 2005</text>
+</svg>
