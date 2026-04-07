@@ -80,6 +80,39 @@ function siege_theme_editor_styles() {
 add_action( 'after_setup_theme', 'siege_theme_editor_styles' );
 
 /**
+ * Footer coordinate randomizer.
+ *
+ * Picks one coordinate system at random on each page load.
+ * Each links to the map service that uses that system.
+ */
+function siege_theme_coordinate_script() {
+	?>
+	<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		var el = document.getElementById('siege-coords');
+		if (!el) return;
+		var coords = [
+			{ text: '30.2672\u00b0N, 97.7431\u00b0W', href: 'https://www.google.com/maps/@30.2672,-97.7431,13z', title: 'WGS84 \u2192 Google Maps' },
+			{ text: 'UTM 14R 621235 3349937', href: 'https://www.openstreetmap.org/#map=13/30.2672/-97.7431', title: 'UTM \u2192 OpenStreetMap' },
+			{ text: 'MGRS 14RNU2123549937', href: 'https://www.bing.com/maps?cp=30.2672~-97.7431&lvl=13', title: 'MGRS \u2192 Bing Maps' },
+			{ text: 'SPCS TX-C 3083 (EPSG:2277)', href: 'https://epsg.io/2277-1702/map#13/30.2672/-97.7431', title: 'State Plane \u2192 epsg.io' }
+		];
+		var pick = coords[Math.floor(Math.random() * coords.length)];
+		var a = document.createElement('a');
+		a.href = pick.href;
+		a.textContent = pick.text;
+		a.title = pick.title;
+		a.target = '_blank';
+		a.rel = 'noopener';
+		a.style.color = 'inherit';
+		el.appendChild(a);
+	});
+	</script>
+	<?php
+}
+add_action( 'wp_footer', 'siege_theme_coordinate_script' );
+
+/**
  * Register block pattern categories.
  */
 function siege_theme_register_pattern_categories() {
