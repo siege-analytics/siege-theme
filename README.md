@@ -157,6 +157,39 @@ After activating the theme, create pages with these slugs for navigation to work
 
 For the blog: **Settings → Reading → Posts page** → create a page called "Blog" with slug `/blog/`.
 
+## Testing
+
+Full documentation in [TESTING.md](TESTING.md).
+
+```bash
+# Install test dependencies
+npm install && npx playwright install
+
+# Run all tests against a WordPress site with this theme active
+WORDPRESS_URL=https://your-site.wordpress.com npm test
+
+# Run specific suites
+npm run test:layout      # Header, footer, nav, coordinates
+npm run test:typography  # Fonts, colors, design tokens
+npm run test:responsive  # Mobile, tablet, desktop
+npm run test:blog        # Blog, 404, search
+npm run test:a11y        # Accessibility
+npm run test:perf        # Performance, CLS, console errors
+
+# Single browser
+npm run test:chrome
+npm run test:firefox
+npm run test:safari
+npm run test:mobile
+npm run test:tablet
+```
+
+Tests run across 6 device profiles: Chrome desktop, Firefox desktop, Safari desktop, iPad, iPhone 14, and Pixel 7.
+
+### WordPress.com Testing
+
+Upload the theme to any paid WordPress.com plan (Personal and up). See [TESTING.md](TESTING.md) for full setup instructions, manual testing checklists, and Lighthouse audit guidance.
+
 ## License
 
 GPL-2.0-or-later

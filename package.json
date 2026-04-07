@@ -1,0 +1,35 @@
+{
+  "name": "siege-theme",
+  "version": "2.0.0",
+  "description": "WordPress block theme for siegeanalytics.com — dark-first tactical display design",
+  "private": true,
+  "scripts": {
+    "test": "npx playwright test",
+    "test:chrome": "npx playwright test --project=chromium-desktop",
+    "test:firefox": "npx playwright test --project=firefox-desktop",
+    "test:safari": "npx playwright test --project=webkit-desktop",
+    "test:mobile": "npx playwright test --project=iphone --project=android",
+    "test:tablet": "npx playwright test --project=ipad",
+    "test:layout": "npx playwright test tests/e2e/layout.spec.ts",
+    "test:typography": "npx playwright test tests/e2e/typography.spec.ts",
+    "test:responsive": "npx playwright test tests/e2e/responsive.spec.ts",
+    "test:blog": "npx playwright test tests/e2e/blog.spec.ts",
+    "test:a11y": "npx playwright test tests/e2e/accessibility.spec.ts",
+    "test:perf": "npx playwright test tests/e2e/performance.spec.ts",
+    "test:report": "npx playwright show-report",
+    "lighthouse": "npx lighthouse --output html --output-path ./lighthouse-report.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siege-analytics/siege-theme.git"
+  },
+  "author": "Siege Analytics",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/siege-analytics/siege-theme/issues"
+  },
+  "homepage": "https://siegeanalytics.com",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1"
+  }
+}

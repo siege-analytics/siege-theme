@@ -1,0 +1,45 @@
+<!-- wp:template-part {"slug":"header","area":"header"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"5rem","bottom":"5rem"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group" style="padding-top:5rem;padding-bottom:5rem">
+
+	<!-- wp:query-title {"type":"search","textColor":"primary","style":{"typography":{"fontWeight":"800","letterSpacing":"-0.03em"}}} /-->
+
+	<!-- wp:query {"queryId":3,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"relevance","author":"","search":"","exclude":[],"sticky":"","inherit":true}} -->
+	<div class="wp-block-query">
+
+		<!-- wp:post-template {"layout":{"type":"default"}} -->
+
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","bottom":"2rem"},"margin":{"bottom":"0"}},"border":{"bottom":{"width":"1px","style":"solid","color":"var(--wp--preset--color--grey-800)"}}},"layout":{"type":"constrained"}} -->
+			<div class="wp-block-group" style="border-bottom:1px solid var(--wp--preset--color--grey-800);margin-bottom:0;padding-top:2rem;padding-bottom:2rem">
+
+				<!-- wp:post-date {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--mono)","fontSize":"0.75rem","letterSpacing":"0.05em","textTransform":"uppercase"}},"textColor":"grey-600"} /-->
+
+				<!-- wp:post-title {"isLink":true,"style":{"typography":{"fontWeight":"700","fontSize":"1.5rem","letterSpacing":"-0.02em"}},"textColor":"white"} /-->
+
+				<!-- wp:post-excerpt {"moreText":"Continue reading →","excerptLength":35,"style":{"typography":{"fontSize":"0.95rem"}},"textColor":"text-secondary"} /-->
+
+			</div>
+			<!-- /wp:group -->
+
+		<!-- /wp:post-template -->
+
+		<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"},"textColor":"primary","style":{"spacing":{"margin":{"top":"3rem"}}}} -->
+			<!-- wp:query-pagination-previous /-->
+			<!-- wp:query-pagination-numbers /-->
+			<!-- wp:query-pagination-next /-->
+		<!-- /wp:query-pagination -->
+
+		<!-- wp:query-no-results -->
+			<!-- wp:paragraph {"textColor":"grey-600","style":{"typography":{"fontSize":"1rem"}}} -->
+			<p class="has-grey-600-color has-text-color" style="font-size:1rem">No results found. Try a different search term.</p>
+			<!-- /wp:paragraph -->
+		<!-- /wp:query-no-results -->
+
+	</div>
+	<!-- /wp:query -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","area":"footer"} /-->
