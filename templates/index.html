@@ -1,0 +1,49 @@
+<!-- wp:template-part {"slug":"header","area":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group">
+	<!-- wp:query {"queryId":1,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true}} -->
+	<div class="wp-block-query">
+
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"4rem","bottom":"2rem"}}},"layout":{"type":"constrained"}} -->
+		<div class="wp-block-group" style="padding-top:4rem;padding-bottom:2rem">
+			<!-- wp:heading {"level":1,"textColor":"primary","style":{"typography":{"fontFamily":"var(--wp--preset--font-family--makhina)"}}} -->
+			<h1 class="wp-block-heading has-primary-color has-text-color" style="font-family:var(--wp--preset--font-family--makhina)">Blog</h1>
+			<!-- /wp:heading -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:post-template {"layout":{"type":"default"}} -->
+
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","bottom":"2rem"},"margin":{"bottom":"2rem"}},"border":{"bottom":{"width":"1px","style":"solid","color":"var(--wp--preset--color--terminal-grey)"}}},"layout":{"type":"constrained"}} -->
+			<div class="wp-block-group" style="border-bottom:1px solid var(--wp--preset--color--terminal-grey);margin-bottom:2rem;padding-top:2rem;padding-bottom:2rem">
+
+				<!-- wp:post-date {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--terminal)","fontSize":"0.8rem"}},"textColor":"mid-grey"} /-->
+
+				<!-- wp:post-title {"isLink":true,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--norwester)","fontSize":"1.75rem"}},"textColor":"primary"} /-->
+
+				<!-- wp:post-excerpt {"moreText":"Read more →","excerptLength":40,"style":{"typography":{"fontSize":"0.95rem"}},"textColor":"readout"} /-->
+
+			</div>
+			<!-- /wp:group -->
+
+		<!-- /wp:post-template -->
+
+		<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"},"textColor":"primary"} -->
+			<!-- wp:query-pagination-previous /-->
+			<!-- wp:query-pagination-numbers /-->
+			<!-- wp:query-pagination-next /-->
+		<!-- /wp:query-pagination -->
+
+		<!-- wp:query-no-results -->
+			<!-- wp:paragraph {"textColor":"mid-grey"} -->
+			<p class="has-mid-grey-color has-text-color">No posts yet.</p>
+			<!-- /wp:paragraph -->
+		<!-- /wp:query-no-results -->
+
+	</div>
+	<!-- /wp:query -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","area":"footer"} /-->

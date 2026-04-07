@@ -1,0 +1,219 @@
+/*
+ * Siege Analytics — CRT Terminal Aesthetic
+ * Inspired by DoD war games displays, green phosphor monitors
+ */
+
+/* ===========================
+   GLOBAL CRT FEEL
+   =========================== */
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* Subtle text glow on headings — phosphor effect */
+h1, h2 {
+	text-shadow: 0 0 8px rgba(151, 193, 72, 0.3);
+}
+
+h3 {
+	text-shadow: 0 0 6px rgba(222, 229, 131, 0.2);
+}
+
+/* ===========================
+   HERO SECTION
+   =========================== */
+
+.siege-hero {
+	position: relative;
+	overflow: hidden;
+}
+
+.siege-hero::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: repeating-linear-gradient(
+		0deg,
+		rgba(0, 0, 0, 0.08) 0px,
+		rgba(0, 0, 0, 0.08) 1px,
+		transparent 1px,
+		transparent 3px
+	);
+	pointer-events: none;
+	z-index: 1;
+}
+
+/* ===========================
+   DATA READOUT — metrics blocks
+   =========================== */
+
+.siege-readout {
+	font-family: var(--wp--preset--font-family--terminal);
+	color: var(--wp--preset--color--primary);
+	background: var(--wp--preset--color--black);
+	border: 1px solid var(--wp--preset--color--terminal-grey);
+	padding: 1.5rem 2rem;
+	position: relative;
+}
+
+.siege-readout::before {
+	content: "▸ ";
+	color: var(--wp--preset--color--accent);
+}
+
+/* ===========================
+   SECTION DIVIDERS
+   =========================== */
+
+.siege-section-divider {
+	border: none;
+	height: 1px;
+	background: linear-gradient(
+		90deg,
+		transparent 0%,
+		var(--wp--preset--color--primary) 20%,
+		var(--wp--preset--color--primary) 80%,
+		transparent 100%
+	);
+	margin: 3rem 0;
+}
+
+/* ===========================
+   CONTENT SECTIONS
+   =========================== */
+
+/* Light reading sections — invert for readability on long content */
+.siege-light-section {
+	background: var(--wp--preset--color--light-grey);
+	color: var(--wp--preset--color--black);
+}
+
+.siege-light-section h2,
+.siege-light-section h3,
+.siege-light-section h4 {
+	color: var(--wp--preset--color--black);
+}
+
+.siege-light-section p {
+	color: var(--wp--preset--color--black);
+}
+
+/* ===========================
+   BUTTONS — terminal style
+   =========================== */
+
+.wp-block-button__link {
+	transition: all 0.3s ease;
+	position: relative;
+}
+
+.wp-block-button__link:hover {
+	background: var(--wp--preset--color--primary) !important;
+	color: var(--wp--preset--color--black) !important;
+	box-shadow: 0 0 12px rgba(151, 193, 72, 0.4);
+}
+
+/* ===========================
+   NAVIGATION
+   =========================== */
+
+.wp-block-navigation a {
+	transition: all 0.3s ease;
+}
+
+.wp-block-navigation a:hover {
+	text-shadow: 0 0 8px rgba(151, 193, 72, 0.5);
+}
+
+/* ===========================
+   BLOG POST CARDS
+   =========================== */
+
+.wp-block-post-title a {
+	text-decoration: none;
+	transition: text-shadow 0.3s ease;
+}
+
+.wp-block-post-title a:hover {
+	text-shadow: 0 0 10px rgba(151, 193, 72, 0.4);
+}
+
+/* ===========================
+   BLOCKQUOTES — command prompt style
+   =========================== */
+
+blockquote {
+	font-style: normal !important;
+}
+
+blockquote p::before {
+	content: "// ";
+	font-family: var(--wp--preset--font-family--terminal);
+	color: var(--wp--preset--color--mid-grey);
+}
+
+/* ===========================
+   CODE BLOCKS
+   =========================== */
+
+pre.wp-block-code {
+	border-radius: 0;
+	position: relative;
+}
+
+pre.wp-block-code::before {
+	content: "terminal";
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-family: var(--wp--preset--font-family--terminal);
+	font-size: 0.65rem;
+	color: var(--wp--preset--color--mid-grey);
+	padding: 0.25rem 0.5rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+/* ===========================
+   SELECTION COLOR
+   =========================== */
+
+::selection {
+	background: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--black);
+}
+
+/* ===========================
+   SCROLLBAR — dark theme
+   =========================== */
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--wp--preset--color--black);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--wp--preset--color--terminal-grey);
+	border: 1px solid var(--wp--preset--color--terminal-grey);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--wp--preset--color--primary);
+}
+
+/* ===========================
+   RESPONSIVE ADJUSTMENTS
+   =========================== */
+
+@media (max-width: 768px) {
+	h1 {
+		text-shadow: 0 0 4px rgba(151, 193, 72, 0.2);
+	}
+}

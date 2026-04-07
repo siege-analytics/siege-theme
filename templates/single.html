@@ -1,0 +1,34 @@
+<!-- wp:template-part {"slug":"header","area":"header"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"4rem","bottom":"4rem"}}},"layout":{"type":"constrained","contentSize":"760px"}} -->
+<main class="wp-block-group" style="padding-top:4rem;padding-bottom:4rem">
+
+	<!-- wp:post-date {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--terminal)","fontSize":"0.8rem","letterSpacing":"1px"}},"textColor":"mid-grey"} /-->
+
+	<!-- wp:post-title {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--norwester)","fontSize":"clamp(2rem, 4vw, 3rem)"},"spacing":{"margin":{"top":"0.5rem","bottom":"2rem"}}},"textColor":"primary"} /-->
+
+	<!-- wp:separator {"style":{"color":{"background":"var(--wp--preset--color--terminal-grey)"}},"className":"is-style-wide"} -->
+	<hr class="wp-block-separator has-text-color has-alpha-channel-opacity has-background is-style-wide" style="background-color:var(--wp--preset--color--terminal-grey);color:var(--wp--preset--color--terminal-grey)"/>
+	<!-- /wp:separator -->
+
+	<!-- wp:post-content {"layout":{"type":"constrained","contentSize":"760px"}} /-->
+
+	<!-- wp:group {"style":{"spacing":{"padding":{"top":"3rem"},"margin":{"top":"3rem"}},"border":{"top":{"width":"1px","style":"solid","color":"var(--wp--preset--color--terminal-grey)"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group" style="border-top:1px solid var(--wp--preset--color--terminal-grey);margin-top:3rem;padding-top:3rem">
+
+		<!-- wp:post-terms {"term":"category","style":{"typography":{"fontFamily":"var(--wp--preset--font-family--terminal)","fontSize":"0.8rem"}},"textColor":"accent"} /-->
+
+		<!-- wp:group {"layout":{"type":"flex","justifyContent":"space-between"},"style":{"spacing":{"margin":{"top":"2rem"}}}} -->
+		<div class="wp-block-group" style="margin-top:2rem">
+			<!-- wp:post-navigation-link {"type":"previous","label":"← Previous","style":{"typography":{"fontFamily":"var(--wp--preset--font-family--norwester)"}},"textColor":"primary"} /-->
+			<!-- wp:post-navigation-link {"label":"Next →","style":{"typography":{"fontFamily":"var(--wp--preset--font-family--norwester)"}},"textColor":"primary"} /-->
+		</div>
+		<!-- /wp:group -->
+
+	</div>
+	<!-- /wp:group -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","area":"footer"} /-->
