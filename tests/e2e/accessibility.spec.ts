@@ -54,7 +54,13 @@ test.describe('Heading Hierarchy', () => {
 });
 
 test.describe('Keyboard Navigation', () => {
-  test('can tab through all interactive elements', async ({ page }) => {
+  // Skip keyboard tests on WebKit/mobile — Safari uses Option+Tab
+  // and mobile devices don't have physical keyboards
+  test('can tab through all interactive elements', async ({ page, browserName }) => {
+    test.skip(browserName === 'webkit', 'Safari uses Option+Tab for keyboard navigation');
+    const viewport = page.viewportSize();
+    test.skip(!!(viewport && viewport.width < 768), 'Mobile devices have no physical keyboard');
+
     await page.goto('/');
 
     // Press Tab and verify focus moves to interactive elements
@@ -75,7 +81,11 @@ test.describe('Keyboard Navigation', () => {
     expect(focusedElements.size).toBeGreaterThan(2);
   });
 
-  test('focused elements have visible focus indicator', async ({ page }) => {
+  test('focused elements have visible focus indicator', async ({ page, browserName }) => {
+    test.skip(browserName === 'webkit', 'Safari uses Option+Tab for keyboard navigation');
+    const viewport = page.viewportSize();
+    test.skip(!!(viewport && viewport.width < 768), 'Mobile devices have no physical keyboard');
+
     await page.goto('/');
 
     // Tab to first interactive element
