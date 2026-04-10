@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 56" fill="none">
+  <defs>
+    <pattern id="logoGrid" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="#97C148"/>
+      <rect x="0.5" y="0.5" width="3" height="3" fill="none" stroke="#0c0c0c" stroke-width="0.3"/>
+    </pattern>
+    <clipPath id="siegeClip">
+      <text x="0" y="40" font-family="Inter, -apple-system, sans-serif" font-size="48" font-weight="800" letter-spacing="-0.03em">SIEGE</text>
+    </clipPath>
+  </defs>
+  <!-- "SIEGE" with grid pattern fill — honoring Darci's grid concept -->
+  <g clip-path="url(#siegeClip)">
+    <rect x="-5" y="-5" width="200" height="60" fill="url(#logoGrid)"/>
+  </g>
+  <!-- "ANALYTICS" in light weight -->
+  <text x="160" y="40" font-family="Inter, -apple-system, sans-serif" font-size="48" font-weight="300" letter-spacing="-0.02em" fill="#e0e0e0">ANALYTICS</text>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" fill="none">
+  <rect width="800" height="400" fill="#0c0c0c"/>
+  <defs>
+    <pattern id="rdGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#141414" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="url(#rdGrid)"/>
+
+  <text x="40" y="30" font-family="'JetBrains Mono', monospace" font-size="10" fill="#666" letter-spacing="0.1em">COLLABORATIVE REDISTRICTING — 156 CONCURRENT PROJECTS</text>
+
+  <!-- Large district map -->
+  <!-- District 1 -->
+  <polygon points="60,50 200,45 220,80 250,60 280,90 260,160 200,180 140,170 80,130 50,90" stroke="#97C148" stroke-width="1.5" fill="#97C148" fill-opacity="0.08"/>
+  <text x="140" y="115" font-family="'JetBrains Mono', monospace" font-size="10" fill="#97C148" opacity="0.7">CD-14</text>
+
+  <!-- District 2 -->
+  <polygon points="200,45 350,40 370,80 380,140 340,180 260,160 280,90 250,60 220,80" stroke="#dee583" stroke-width="1.5" fill="#dee583" fill-opacity="0.06"/>
+  <text x="290" y="110" font-family="'JetBrains Mono', monospace" font-size="10" fill="#dee583" opacity="0.7">CD-15</text>
+
+  <!-- District 3 -->
+  <polygon points="80,130 140,170 200,180 260,160 340,180 330,250 270,280 200,290 120,270 60,220" stroke="#97C148" stroke-width="1.5" fill="#97C148" fill-opacity="0.06"/>
+  <text x="180" y="235" font-family="'JetBrains Mono', monospace" font-size="10" fill="#97C148" opacity="0.7">CD-16</text>
+
+  <!-- District 4 -->
+  <polygon points="60,220 120,270 200,290 270,280 330,250 350,310 300,360 220,370 140,350 50,300" stroke="#dee583" stroke-width="1.5" fill="#dee583" fill-opacity="0.05"/>
+  <text x="180" y="325" font-family="'JetBrains Mono', monospace" font-size="10" fill="#dee583" opacity="0.7">CD-17</text>
+
+  <!-- District 5 -->
+  <polygon points="340,180 380,140 370,80 440,60 460,120 470,200 430,260 350,310 330,250" stroke="#666" stroke-width="1" fill="none" stroke-dasharray="4,3"/>
+  <text x="390" y="170" font-family="'JetBrains Mono', monospace" font-size="10" fill="#666" opacity="0.5">CD-18</text>
+
+  <!-- Active cursor / collaborative editing indicator -->
+  <circle cx="250" cy="160" r="6" fill="none" stroke="#97C148" stroke-width="2">
+    <animate attributeName="r" values="4;8;4" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <rect x="258" y="152" width="85" height="16" rx="2" fill="#97C148"/>
+  <text x="262" y="163" font-family="'JetBrains Mono', monospace" font-size="8" fill="#0c0c0c">Analyst #4,217</text>
+
+  <circle cx="180" cy="220" r="6" fill="none" stroke="#dee583" stroke-width="2">
+    <animate attributeName="r" values="4;8;4" dur="2.3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0.4;1" dur="2.3s" repeatCount="indefinite"/>
+  </circle>
+  <rect x="188" y="212" width="85" height="16" rx="2" fill="#dee583"/>
+  <text x="192" y="223" font-family="'JetBrains Mono', monospace" font-size="8" fill="#0c0c0c">Analyst #8,903</text>
+
+  <!-- Right panel: platform stats -->
+  <rect x="510" y="50" width="270" height="300" fill="#0c0c0c" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="525" y="78" font-family="'JetBrains Mono', monospace" font-size="9" fill="#666" letter-spacing="0.05em">PLATFORM STATUS</text>
+  <line x1="525" y1="85" x2="765" y2="85" stroke="#1e1e1e" stroke-width="1"/>
+
+  <!-- Stats -->
+  <text x="525" y="112" font-family="'JetBrains Mono', monospace" font-size="22" fill="#97C148" font-weight="bold">12,847</text>
+  <text x="525" y="128" font-family="'JetBrains Mono', monospace" font-size="9" fill="#666">active analysts</text>
+
+  <text x="525" y="165" font-family="'JetBrains Mono', monospace" font-size="22" fill="#97C148" font-weight="bold">~90</text>
+  <text x="525" y="181" font-family="'JetBrains Mono', monospace" font-size="9" fill="#666">organizations</text>
+
+  <text x="525" y="218" font-family="'JetBrains Mono', monospace" font-size="22" fill="#dee583" font-weight="bold">156</text>
+  <text x="525" y="234" font-family="'JetBrains Mono', monospace" font-size="9" fill="#666">concurrent projects</text>
+
+  <text x="525" y="271" font-family="'JetBrains Mono', monospace" font-size="22" fill="#97C148" font-weight="bold">99.7%</text>
+  <text x="525" y="287" font-family="'JetBrains Mono', monospace" font-size="9" fill="#666">uptime (18 months)</text>
+
+  <!-- Cost savings -->
+  <line x1="525" y1="305" x2="765" y2="305" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="525" y="328" font-family="'JetBrains Mono', monospace" font-size="9" fill="#97C148">▸ $4.7M saved across orgs</text>
+  <text x="525" y="344" font-family="'JetBrains Mono', monospace" font-size="9" fill="#666">  Making redistricting accessible</text>
+  <text x="525" y="356" font-family="'JetBrains Mono', monospace" font-size="9" fill="#666">  to nonprofits who couldn't</text>
+  <text x="525" y="368" font-family="'JetBrains Mono', monospace" font-size="9" fill="#666">  previously afford it.</text>
+</svg>

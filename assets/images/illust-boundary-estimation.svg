@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" fill="none">
+  <rect width="800" height="400" fill="#0c0c0c"/>
+
+  <!-- Subtle grid -->
+  <defs>
+    <pattern id="bgGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#141414" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="url(#bgGrid)"/>
+
+  <!-- Left side: scattered voter address points (raw data) -->
+  <text x="60" y="30" font-family="'JetBrains Mono', monospace" font-size="10" fill="#666" letter-spacing="0.1em">RAW VOTER FILE ADDRESSES</text>
+
+  <!-- Voter points — scattered dots representing addresses -->
+  <circle cx="80" cy="80" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="95" cy="95" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="72" cy="110" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="110" cy="75" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="88" cy="130" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="120" cy="100" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="105" cy="140" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="140" cy="90" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="135" cy="120" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="155" cy="105" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="65" cy="155" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="90" cy="170" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="115" cy="160" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="145" cy="155" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="160" cy="140" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="175" cy="120" r="2" fill="#97C148" opacity="0.6"/>
+
+  <!-- Second cluster -->
+  <circle cx="80" cy="220" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="100" cy="240" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="120" cy="225" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="90" cy="260" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="140" cy="250" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="110" cy="275" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="155" cy="230" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="130" cy="280" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="170" cy="260" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="160" cy="290" r="2" fill="#97C148" opacity="0.6"/>
+
+  <!-- Third cluster -->
+  <circle cx="70" cy="320" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="95" cy="335" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="115" cy="310" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="130" cy="340" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="150" cy="325" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="170" cy="350" r="2" fill="#97C148" opacity="0.6"/>
+  <circle cx="85" cy="360" r="2" fill="#97C148" opacity="0.6"/>
+
+  <!-- Arrow in the middle -->
+  <line x1="240" y1="200" x2="340" y2="200" stroke="#97C148" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <polygon points="340,195 355,200 340,205" fill="#97C148"/>
+  <text x="260" y="185" font-family="'JetBrains Mono', monospace" font-size="9" fill="#97C148">TRIGONOMETRIC</text>
+  <text x="260" y="196" font-family="'JetBrains Mono', monospace" font-size="9" fill="#97C148">BOUNDARY</text>
+  <text x="260" y="222" font-family="'JetBrains Mono', monospace" font-size="9" fill="#666">estimation</text>
+
+  <!-- Right side: constructed polygon boundaries -->
+  <text x="420" y="30" font-family="'JetBrains Mono', monospace" font-size="10" fill="#666" letter-spacing="0.1em">CONSTRUCTED PRECINCT BOUNDARIES</text>
+
+  <!-- Precinct polygon 1 -->
+  <polygon points="420,60 530,55 550,110 540,170 460,180 410,130" stroke="#97C148" stroke-width="1.5" fill="#97C148" fill-opacity="0.06"/>
+  <text x="460" y="120" font-family="'JetBrains Mono', monospace" font-size="9" fill="#97C148" opacity="0.7">PCT-1247</text>
+  <!-- Points inside -->
+  <circle cx="450" cy="90" r="2" fill="#97C148" opacity="0.8"/>
+  <circle cx="480" cy="100" r="2" fill="#97C148" opacity="0.8"/>
+  <circle cx="510" cy="85" r="2" fill="#97C148" opacity="0.8"/>
+  <circle cx="470" cy="130" r="2" fill="#97C148" opacity="0.8"/>
+  <circle cx="500" cy="145" r="2" fill="#97C148" opacity="0.8"/>
+  <circle cx="530" cy="110" r="2" fill="#97C148" opacity="0.8"/>
+
+  <!-- Precinct polygon 2 -->
+  <polygon points="410,130 460,180 540,170 560,220 530,280 440,290 390,240" stroke="#dee583" stroke-width="1.5" fill="#dee583" fill-opacity="0.04"/>
+  <text x="450" y="235" font-family="'JetBrains Mono', monospace" font-size="9" fill="#dee583" opacity="0.7">PCT-1248</text>
+  <circle cx="440" cy="200" r="2" fill="#dee583" opacity="0.8"/>
+  <circle cx="470" cy="220" r="2" fill="#dee583" opacity="0.8"/>
+  <circle cx="500" cy="210" r="2" fill="#dee583" opacity="0.8"/>
+  <circle cx="480" cy="250" r="2" fill="#dee583" opacity="0.8"/>
+  <circle cx="520" cy="240" r="2" fill="#dee583" opacity="0.8"/>
+
+  <!-- Precinct polygon 3 -->
+  <polygon points="390,240 440,290 530,280 540,330 490,370 400,360 370,310" stroke="#97C148" stroke-width="1.5" fill="#97C148" fill-opacity="0.06"/>
+  <text x="440" y="340" font-family="'JetBrains Mono', monospace" font-size="9" fill="#97C148" opacity="0.7">PCT-1249</text>
+  <circle cx="430" cy="310" r="2" fill="#97C148" opacity="0.8"/>
+  <circle cx="460" cy="330" r="2" fill="#97C148" opacity="0.8"/>
+  <circle cx="490" cy="320" r="2" fill="#97C148" opacity="0.8"/>
+  <circle cx="510" cy="350" r="2" fill="#97C148" opacity="0.8"/>
+
+  <!-- Adjacent precinct (partial) -->
+  <polygon points="530,55 680,50 720,120 700,180 560,220 540,170 550,110" stroke="#666" stroke-width="1" fill="none" stroke-dasharray="4,3"/>
+  <text x="600" y="120" font-family="'JetBrains Mono', monospace" font-size="9" fill="#666" opacity="0.5">PCT-1250</text>
+
+  <polygon points="560,220 700,180 730,260 710,340 540,330 530,280" stroke="#666" stroke-width="1" fill="none" stroke-dasharray="4,3"/>
+  <text x="610" y="270" font-family="'JetBrains Mono', monospace" font-size="9" fill="#666" opacity="0.5">PCT-1251</text>
+
+  <!-- Data readout at bottom right -->
+  <rect x="600" y="350" width="185" height="40" fill="#0c0c0c" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="610" y="366" font-family="'JetBrains Mono', monospace" font-size="9" fill="#97C148">▸ 178,000+ precincts mapped</text>
+  <text x="610" y="380" font-family="'JetBrains Mono', monospace" font-size="9" fill="#666">  73.5% cost reduction</text>
+</svg>
