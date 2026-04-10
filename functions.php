@@ -127,3 +127,31 @@ function siege_theme_register_pattern_categories() {
 	) );
 }
 add_action( 'init', 'siege_theme_register_pattern_categories' );
+
+/**
+ * Allow SVG uploads.
+ *
+ * SVGs are used for logo, illustrations, and data visualizations.
+ * WordPress blocks SVG by default; this adds it to allowed MIME types.
+ */
+function siege_theme_allow_svg( $mimes ) {
+	$mimes['svg']  = 'image/svg+xml';
+	$mimes['svgz'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter( 'upload_mimes', 'siege_theme_allow_svg' );
+
+/**
+ * Fix SVG display in media library.
+ */
+function siege_theme_fix_svg_display( $response, $attachment, $meta ) {
+	if ( $response['mime'] === 'image/svg+xml' ) {
+		$response['sizes'] = array(
+			'full' => array(
+				'url' => $response['url'],
+			),
+		);
+	}
+	return $response;
+}
+add_filter( 'wp_prepare_attachment_for_js', 'siege_theme_fix_svg_display', 10, 3 );
