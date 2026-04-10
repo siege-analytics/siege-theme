@@ -17,6 +17,30 @@ body {
 }
 
 /* ===========================
+   CROSSHAIR RETICLE ACCENT
+   The secondary mark — appears before section headings.
+   Darci's logo is the brand; the reticle is the accent.
+   =========================== */
+
+.siege-reticle::before {
+	content: "";
+	display: block;
+	width: 24px;
+	height: 24px;
+	margin-bottom: 1rem;
+	background-image: url("../images/reticle-accent.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+/* SVG illustration images should not get the default border */
+.wp-block-image img[src*="illust-"],
+.wp-block-image img[src*="reticle"],
+.wp-block-image img[src*="logo"] {
+	border: none !important;
+}
+
+/* ===========================
    SECTION DIVIDERS
    =========================== */
 
