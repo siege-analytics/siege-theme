@@ -1,6 +1,11 @@
 /*
  * Siege Analytics — Tactical Display
  * Clean dark UI. Precision over nostalgia.
+ *
+ * Visual vocabulary: the crosshair reticle runs through the site
+ * as a recurring motif — section markers, list bullets, dividers,
+ * data callouts. Darci's grid wordmark is the brand identity;
+ * the reticle is the conceptual accent.
  */
 
 /* ===========================
@@ -17,20 +22,132 @@ body {
 }
 
 /* ===========================
-   CROSSHAIR RETICLE ACCENT
-   The secondary mark — appears before section headings.
-   Darci's logo is the brand; the reticle is the accent.
+   CROSSHAIR RETICLE — VISUAL VOCABULARY
+   Used as: section markers, list bullets, dividers,
+   data callouts, blog post meta accents.
    =========================== */
 
+/* Reticle inline SVG as data URI (avoids extra HTTP request) */
+:root {
+	--siege-reticle: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Crect x='0' y='11' width='24' height='2' rx='1' fill='%2397C148'/%3E%3Crect x='11' y='0' width='2' height='24' rx='1' fill='%2397C148'/%3E%3Ccircle cx='12' cy='12' r='6' stroke='%2397C148' stroke-width='1.5' fill='none'/%3E%3Ccircle cx='12' cy='12' r='1.5' fill='%2397C148'/%3E%3C/svg%3E");
+	--siege-reticle-dim: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Crect x='0' y='11' width='24' height='2' rx='1' fill='%23666666'/%3E%3Crect x='11' y='0' width='2' height='24' rx='1' fill='%23666666'/%3E%3Ccircle cx='12' cy='12' r='6' stroke='%23666666' stroke-width='1.5' fill='none'/%3E%3Ccircle cx='12' cy='12' r='1.5' fill='%23666666'/%3E%3C/svg%3E");
+}
+
+/* 1. Section marker — before h2 headings on content pages */
+.entry-content h2::before,
+.wp-block-post-content h2::before {
+	content: "";
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-bottom: 0.75rem;
+	background-image: var(--siege-reticle);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+/* Don't double up with explicit .siege-reticle class */
 .siege-reticle::before {
 	content: "";
 	display: block;
 	width: 24px;
 	height: 24px;
 	margin-bottom: 1rem;
-	background-image: url("../images/reticle-accent.svg");
+	background-image: var(--siege-reticle);
 	background-size: contain;
 	background-repeat: no-repeat;
+}
+
+/* 2. List bullets — replace default bullets with mini reticles */
+.entry-content ul:not(.wp-block-navigation__container) li::marker,
+.wp-block-post-content ul:not(.wp-block-navigation__container) li::marker {
+	content: "";
+}
+
+.entry-content ul:not(.wp-block-navigation__container) > li,
+.wp-block-post-content ul:not(.wp-block-navigation__container) > li {
+	padding-left: 0.5rem;
+	position: relative;
+}
+
+.entry-content ul:not(.wp-block-navigation__container) > li::before,
+.wp-block-post-content ul:not(.wp-block-navigation__container) > li::before {
+	content: "";
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin-right: 0.75rem;
+	vertical-align: middle;
+	background-image: var(--siege-reticle-dim);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+/* 3. Section dividers — reticle centered instead of plain hr */
+.wp-block-separator {
+	position: relative;
+	border: none !important;
+	height: 1px;
+	background: var(--wp--preset--color--grey-800) !important;
+}
+
+.wp-block-separator::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 16px;
+	height: 16px;
+	background-image: var(--siege-reticle-dim);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: var(--wp--preset--color--surface, #0c0c0c);
+	padding: 0 12px;
+}
+
+/* 4. Blog post date — small reticle before the date */
+.wp-block-post-date::before {
+	content: "";
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin-right: 0.5rem;
+	vertical-align: middle;
+	background-image: var(--siege-reticle-dim);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+/* 5. Blockquote accent — reticle replaces left border top */
+blockquote {
+	font-style: normal !important;
+	position: relative;
+}
+
+blockquote::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -1.5rem;
+	width: 14px;
+	height: 14px;
+	background-image: var(--siege-reticle);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+/* 6. Data readout cards — reticle replaces ▸ character */
+.siege-readout {
+	font-family: var(--wp--preset--font-family--mono);
+	color: var(--wp--preset--color--primary);
+	background: var(--wp--preset--color--black);
+	border-left: 3px solid var(--wp--preset--color--primary);
+	padding: 1.5rem 2rem;
+	margin: 2rem 0;
+	font-size: 0.9rem;
+	line-height: 1.8;
+	letter-spacing: 0.02em;
 }
 
 /* SVG illustration images should not get the default border */
@@ -47,31 +164,14 @@ body {
 .siege-divider {
 	border: none;
 	height: 1px;
-	background: var(--wp--preset--color--terminal-grey);
+	background: var(--wp--preset--color--grey-800);
 	margin: 4rem 0;
-}
-
-/* ===========================
-   DATA READOUT — metrics callouts
-   =========================== */
-
-.siege-readout {
-	font-family: var(--wp--preset--font-family--terminal);
-	color: var(--wp--preset--color--primary);
-	background: var(--wp--preset--color--black);
-	border-left: 3px solid var(--wp--preset--color--primary);
-	padding: 1.5rem 2rem;
-	margin: 2rem 0;
-	font-size: 0.9rem;
-	line-height: 1.8;
-	letter-spacing: 0.02em;
 }
 
 /* ===========================
    CONTENT SECTIONS
    =========================== */
 
-/* Light sections for long-form reading */
 .siege-light-section {
 	background: var(--wp--preset--color--light-grey);
 	color: var(--wp--preset--color--black);
@@ -126,14 +226,6 @@ body {
 }
 
 /* ===========================
-   BLOCKQUOTES
-   =========================== */
-
-blockquote {
-	font-style: normal !important;
-}
-
-/* ===========================
    CODE BLOCKS
    =========================== */
 
@@ -146,7 +238,7 @@ pre.wp-block-code {
    =========================== */
 
 .wp-block-image img {
-	border: 1px solid var(--wp--preset--color--terminal-grey);
+	border: 1px solid var(--wp--preset--color--grey-800);
 }
 
 /* ===========================
@@ -171,7 +263,7 @@ pre.wp-block-code {
 }
 
 ::-webkit-scrollbar-thumb {
-	background: var(--wp--preset--color--terminal-grey);
+	background: var(--wp--preset--color--grey-800);
 }
 
 ::-webkit-scrollbar-thumb:hover {
