@@ -24,6 +24,16 @@ html {
 	border-bottom: 1px solid var(--wp--preset--color--line);
 }
 
+.admin-bar .site-header {
+	top: 32px;
+}
+
+@media (max-width: 782px) {
+	.admin-bar .site-header {
+		top: 46px;
+	}
+}
+
 /* ===========================
    LOGO MARK (CSS placeholder until final logo)
    =========================== */
@@ -322,7 +332,7 @@ html {
 	text-transform: uppercase;
 	padding: 5px 12px;
 	background: var(--wp--preset--color--rust);
-	color: var(--wp--preset--color--paper);
+	color: var(--wp--preset--color--white);
 }
 
 /* ===========================

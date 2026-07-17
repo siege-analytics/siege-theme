@@ -93,7 +93,7 @@ The only tokens carried from the old terminal theme are the **green family** (`#
 | `placeholder` | `#e7e0d1` | Image placeholder fill |
 | `footer` | `#0f0e0a` | Footer background |
 | `selection` | `#cfe0c9` | `::selection` background |
-| Link | `#2f6b7a` default, `#16150f` hover | Body links |
+| `link-color` | `#2f6b7a` default, `#16150f` hover | Body links |
 
 **Usage discipline:** at most 1-2 background colors per surface (paper *or* ink). Green is structural, not decorative -- borders, primary buttons, the mark. Rust is a single-point accent only. Never introduce hues outside this table.
 
@@ -127,10 +127,10 @@ Google Fonts: `Archivo:wght@500;700;800;900`, `Newsreader:ital,wght@0,400;0,500;
 
 | theme.json slug | CSS custom property | Typeface |
 |-----------------|---------------------|----------|
-| `heading` | `var(--wp--preset--font-family--heading)` | Archivo |
-| `body` | `var(--wp--preset--font-family--body)` | Newsreader |
+| `archivo` | `var(--wp--preset--font-family--archivo)` | Archivo |
+| `newsreader` | `var(--wp--preset--font-family--newsreader)` | Newsreader |
 | `mono` | `var(--wp--preset--font-family--mono)` | Spline Sans Mono |
-| `system` | `var(--wp--preset--font-family--system)` | System UI stack (fallback) |
+| `system-sans` | `var(--wp--preset--font-family--system-sans)` | System UI stack (fallback) |
 
 ---
 
