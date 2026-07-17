@@ -1,27 +1,33 @@
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
 
-<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"6rem","bottom":"6rem"}}},"layout":{"type":"constrained","contentSize":"600px"}} -->
-<main class="wp-block-group" style="padding-top:6rem;padding-bottom:6rem">
+<!-- wp:group {"tagName":"main","layout":{"type":"default"}} -->
+<main class="wp-block-group">
 
-	<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--terminal)","fontSize":"0.8rem","letterSpacing":"1px"}},"textColor":"mid-grey"} -->
-	<p class="has-mid-grey-color has-text-color" style="font-size:0.8rem;font-family:var(--wp--preset--font-family--terminal);letter-spacing:1px">ERROR 404 · TARGET NOT FOUND</p>
-	<!-- /wp:paragraph -->
+	<!-- wp:group {"style":{"spacing":{"padding":{"top":"120px","bottom":"120px","left":"48px","right":"48px"}}},"layout":{"type":"constrained","contentSize":"640px"}} -->
+	<div class="wp-block-group" style="padding-top:120px;padding-right:48px;padding-bottom:120px;padding-left:48px">
 
-	<!-- wp:heading {"level":1,"textColor":"primary","style":{"typography":{"fontFamily":"var(--wp--preset--font-family--makhina)","fontSize":"clamp(3rem, 6vw, 5rem)"}}} -->
-	<h1 class="wp-block-heading has-primary-color has-text-color" style="font-family:var(--wp--preset--font-family--makhina);font-size:clamp(3rem, 6vw, 5rem)">Signal Lost</h1>
-	<!-- /wp:heading -->
+		<!-- wp:paragraph {"className":"eyebrow","style":{"spacing":{"margin":{"bottom":"18px"}}}} -->
+		<p class="eyebrow" style="margin-bottom:18px">Error 404</p>
+		<!-- /wp:paragraph -->
 
-	<!-- wp:paragraph {"textColor":"readout","style":{"typography":{"fontSize":"1.1rem"}}} -->
-	<p class="has-readout-color has-text-color" style="font-size:1.1rem">The page you're looking for doesn't exist, or the coordinates have changed.</p>
-	<!-- /wp:paragraph -->
+		<!-- wp:heading {"level":1,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--archivo)","fontWeight":"900","fontSize":"clamp(2.6rem, 6vw, 5rem)","lineHeight":"1","letterSpacing":"-2px"},"spacing":{"margin":{"bottom":"0"}}},"textColor":"ink"} -->
+		<h1 class="wp-block-heading has-ink-color has-text-color" style="font-family:var(--wp--preset--font-family--archivo);font-weight:900;font-size:clamp(2.6rem, 6vw, 5rem);line-height:1;letter-spacing:-2px;margin-bottom:0">Page not found.</h1>
+		<!-- /wp:heading -->
 
-	<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"2rem"}}}} -->
-	<div class="wp-block-buttons" style="margin-top:2rem">
-		<!-- wp:button {"textColor":"primary","style":{"border":{"width":"2px","style":"solid","color":"var(--wp--preset--color--primary)"},"color":{"background":"transparent"}}} -->
-		<div class="wp-block-button"><a class="wp-block-button__link has-primary-color has-text-color has-background wp-element-button" href="/" style="border-style:solid;border-width:2px;border-color:var(--wp--preset--color--primary);background-color:transparent">Return to Base →</a></div>
-		<!-- /wp:button -->
+		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--newsreader)","fontSize":"1.25rem","lineHeight":"1.55"},"spacing":{"margin":{"top":"24px"}}},"textColor":"ink-soft"} -->
+		<p style="font-family:var(--wp--preset--font-family--newsreader);font-size:1.25rem;line-height:1.55;margin-top:24px" class="has-ink-soft-color has-text-color">The page you're looking for doesn't exist, or the coordinates have changed. Try starting from the homepage.</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"2.5rem"}}}} -->
+		<div class="wp-block-buttons" style="margin-top:2.5rem">
+			<!-- wp:button {"backgroundColor":"green-deep","textColor":"paper","style":{"typography":{"fontFamily":"var(--wp--preset--font-family--archivo)","fontWeight":"700","fontSize":"0.9375rem","letterSpacing":"0.5px"},"border":{"radius":"0px"},"spacing":{"padding":{"top":"16px","bottom":"16px","left":"34px","right":"34px"}}}} -->
+			<div class="wp-block-button"><a class="wp-block-button__link has-paper-color has-green-deep-background-color has-text-color has-background wp-element-button" href="/" style="border-radius:0px;padding-top:16px;padding-right:34px;padding-bottom:16px;padding-left:34px;font-family:var(--wp--preset--font-family--archivo);font-weight:700;font-size:0.9375rem;letter-spacing:0.5px">Back to home &rarr;</a></div>
+			<!-- /wp:button -->
+		</div>
+		<!-- /wp:buttons -->
+
 	</div>
-	<!-- /wp:buttons -->
+	<!-- /wp:group -->
 
 </main>
 <!-- /wp:group -->

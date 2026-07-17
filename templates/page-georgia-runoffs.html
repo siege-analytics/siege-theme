@@ -1,0 +1,250 @@
+<!-- wp:template-part {"slug":"header","area":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"default"}} -->
+<main class="wp-block-group">
+
+	<!-- ======================== HERO ======================== -->
+
+	<!-- wp:group {"style":{"spacing":{"padding":{"top":"80px","bottom":"56px","left":"48px","right":"48px"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+	<div class="wp-block-group" style="padding-top:80px;padding-right:48px;padding-bottom:56px;padding-left:48px">
+
+		<!-- wp:paragraph {"className":"eyebrow","style":{"spacing":{"margin":{"bottom":"22px"}}}} -->
+		<p class="eyebrow" style="margin-bottom:22px"><a href="/work/">Work</a> / Case 01 -- Georgia</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:heading {"level":1,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--archivo)","fontWeight":"900","fontSize":"clamp(2.6rem, 6vw, 5.25rem)","lineHeight":"1","letterSpacing":"-2px"},"spacing":{"margin":{"bottom":"0"}}},"textColor":"ink"} -->
+		<h1 class="wp-block-heading has-ink-color has-text-color" style="font-family:var(--wp--preset--font-family--archivo);font-weight:900;font-size:clamp(2.6rem, 6vw, 5.25rem);line-height:1;letter-spacing:-2px;margin-bottom:0">The voters the file couldn't see.</h1>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--newsreader)","fontSize":"1.375rem","lineHeight":"1.5"},"spacing":{"margin":{"top":"30px"}}},"textColor":"ink-muted"} -->
+		<p style="font-family:var(--wp--preset--font-family--newsreader);font-size:1.375rem;line-height:1.5;margin-top:30px" class="has-ink-muted-color has-text-color">Georgia's 2021 Senate runoffs turned on turnout at the margins. Standard voterfiles badly undercounted the state's Asian American and Pacific Islander electorate -- so we re-based the model, found the people who were there all along, and helped affinity groups reach them in a language and idiom that fit. <em>The map was wrong. We fixed the map.</em></p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:html -->
+		<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;font-family:var(--wp--preset--font-family--mono);font-size:13px;">
+			<span style="border:1px solid var(--wp--preset--color--green-deep);background:#eef3e6;color:var(--wp--preset--color--green-deep);padding:7px 14px;">Senate runoffs -- 2020-21</span>
+			<a href="https://www.aapivictoryfund.org" target="_blank" rel="noopener" style="border:1px solid var(--wp--preset--color--line-2);color:var(--wp--preset--color--ink-muted);padding:7px 14px;text-decoration:none;">AAPI Victory Fund</a>
+			<span style="border:1px solid var(--wp--preset--color--line-2);color:var(--wp--preset--color--ink-muted);padding:7px 14px;">Spatial + homophily analysis</span>
+		</div>
+		<!-- /wp:html -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- ======================== HEADLINE STATS ======================== -->
+
+	<!-- wp:html -->
+	<section class="siege-stats-strip">
+		<div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);">
+			<div class="siege-stat-cell">
+				<div class="siege-stat-value" style="color:var(--wp--preset--color--rust);">2.9x</div>
+				<div class="siege-stat-label">More high-confidence AAPI voters after re-basing</div>
+			</div>
+			<div class="siege-stat-cell" style="border-right:1px solid var(--wp--preset--color--line);">
+				<div class="siege-stat-value" style="color:var(--wp--preset--color--green-deep);">65,000</div>
+				<div class="siege-stat-label">First-time-contacted voters reached during early vote</div>
+			</div>
+			<div class="siege-stat-cell" style="border-right:none;">
+				<div class="siege-stat-value" style="color:var(--wp--preset--color--link);">Statewide</div>
+				<div class="siege-stat-label">Coverage across Georgia's 159 counties</div>
+			</div>
+		</div>
+	</section>
+	<!-- /wp:html -->
+
+	<!-- ======================== THE PROBLEM (dark) ======================== -->
+
+	<!-- wp:group {"className":"siege-dark-section","style":{"spacing":{"padding":{"top":"88px","bottom":"88px","left":"48px","right":"48px"}}},"layout":{"type":"constrained","contentSize":"1000px"}} -->
+	<div class="wp-block-group siege-dark-section" style="padding-top:88px;padding-right:48px;padding-bottom:88px;padding-left:48px">
+
+		<!-- wp:paragraph {"className":"eyebrow"} -->
+		<p class="eyebrow">01 -- The problem</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:heading {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--archivo)","fontWeight":"800","fontSize":"clamp(1.875rem, 4vw, 3.25rem)","lineHeight":"1.05","letterSpacing":"-1.2px"},"spacing":{"margin":{"top":"18px"}}}} -->
+		<h2 class="wp-block-heading" style="font-family:var(--wp--preset--font-family--archivo);font-weight:800;font-size:clamp(1.875rem, 4vw, 3.25rem);line-height:1.05;letter-spacing:-1.2px;margin-top:18px">A voter you can't find is a voter you can't reach.</h2>
+		<!-- /wp:heading -->
+
+		<!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"44px"},"margin":{"top":"40px"}}}} -->
+		<div class="wp-block-columns" style="margin-top:40px">
+			<!-- wp:column -->
+			<div class="wp-block-column">
+				<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--newsreader)","fontSize":"1.1875rem","lineHeight":"1.6"}}} -->
+				<p style="font-family:var(--wp--preset--font-family--newsreader);font-size:1.1875rem;line-height:1.6">Commercial voterfiles infer race and ethnicity from surname dictionaries and coarse Census geography. For the AAPI electorate -- dozens of distinct communities, many with surnames the dictionaries miss -- that method fails quietly. It doesn't error out; it just returns a number that is far too small, and everyone downstream trusts it.</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:column -->
+			<!-- wp:column -->
+			<div class="wp-block-column">
+				<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--newsreader)","fontSize":"1.1875rem","lineHeight":"1.6"},"color":{"text":"#b9b5a6"}}} -->
+				<p style="font-family:var(--wp--preset--font-family--newsreader);font-size:1.1875rem;line-height:1.6;color:#b9b5a6">In a runoff decided by tens of thousands of votes, an undercounted community is a strategic blind spot. Field programs can't turf what they can't see. Affinity groups can't call people who aren't flagged. The voters were registered, active, and reachable -- but the model rendered them invisible, so no program was built to talk to them.</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:column -->
+		</div>
+		<!-- /wp:columns -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- ======================== WHAT WE DID ======================== -->
+
+	<!-- wp:group {"style":{"spacing":{"padding":{"top":"88px","bottom":"88px","left":"48px","right":"48px"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+	<div class="wp-block-group" style="padding-top:88px;padding-right:48px;padding-bottom:88px;padding-left:48px">
+
+		<!-- wp:paragraph {"className":"eyebrow"} -->
+		<p class="eyebrow">02 -- What we did</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:heading {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--archivo)","fontWeight":"800","fontSize":"clamp(1.875rem, 4vw, 3rem)","lineHeight":"1.05","letterSpacing":"-1px"},"spacing":{"margin":{"top":"16px","bottom":"8px"}}}} -->
+		<h2 class="wp-block-heading" style="font-family:var(--wp--preset--font-family--archivo);font-weight:800;font-size:clamp(1.875rem, 4vw, 3rem);line-height:1.05;letter-spacing:-1px;margin-top:16px;margin-bottom:8px">We re-based the model on how people actually cluster.</h2>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--newsreader)","fontSize":"1.1875rem","lineHeight":"1.55"},"spacing":{"margin":{"bottom":"44px"}}},"textColor":"ink-soft"} -->
+		<p style="font-family:var(--wp--preset--font-family--newsreader);font-size:1.1875rem;line-height:1.55;margin-bottom:44px" class="has-ink-soft-color has-text-color">Instead of trusting surnames alone, we layered spatial clustering and homophily -- the tendency of similar households to live near one another -- onto the geo-referenced file. That surfaced high-confidence AAPI voters the dictionary approach never scored.</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:html -->
+		<div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:44px;align-items:center;">
+			<div style="border:1px solid var(--wp--preset--color--line-2);background:#fff;padding:30px 34px 34px;">
+				<div style="font-family:var(--wp--preset--font-family--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--wp--preset--color--mono);">High-confidence AAPI voters, statewide</div>
+				<div style="display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:56px;height:260px;margin-top:26px;">
+					<div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;">
+						<div style="font-family:var(--wp--preset--font-family--archivo);font-weight:900;font-size:22px;color:var(--wp--preset--color--mono);margin-bottom:8px;">59,000</div>
+						<div style="width:100%;height:35%;background:var(--wp--preset--color--line-2);"></div>
+					</div>
+					<div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;">
+						<div style="font-family:var(--wp--preset--font-family--archivo);font-weight:900;font-size:22px;color:var(--wp--preset--color--rust);margin-bottom:8px;">169,000</div>
+						<div style="width:100%;height:100%;background:var(--wp--preset--color--rust);"></div>
+					</div>
+				</div>
+				<div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:12px;font-family:var(--wp--preset--font-family--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--wp--preset--color--mono);text-align:center;">
+					<span>Before</span><span>After re-basing</span>
+				</div>
+			</div>
+			<div class="siege-method-steps">
+				<div class="siege-method-step">
+					<span class="siege-method-step-num">01</span>
+					<div><h4 style="font-family:var(--wp--preset--font-family--archivo);font-weight:700;font-size:18px;margin:0 0 4px;">Start from geography, not guesses</h4><p style="font-family:var(--wp--preset--font-family--newsreader);font-size:1rem;line-height:1.5;color:var(--wp--preset--color--ink-soft);margin:0;">Every household placed precisely, then read against Census and precinct reference.</p></div>
+				</div>
+				<div class="siege-method-step">
+					<span class="siege-method-step-num">02</span>
+					<div><h4 style="font-family:var(--wp--preset--font-family--archivo);font-weight:700;font-size:18px;margin:0 0 4px;">Cluster on behaviour and affinity</h4><p style="font-family:var(--wp--preset--font-family--newsreader);font-size:1rem;line-height:1.5;color:var(--wp--preset--color--ink-soft);margin:0;">Homophily analysis groups likely-similar households the surname model splits apart.</p></div>
+				</div>
+				<div class="siege-method-step">
+					<span class="siege-method-step-num">03</span>
+					<div><h4 style="font-family:var(--wp--preset--font-family--archivo);font-weight:700;font-size:18px;margin:0 0 4px;">Score confidence, not labels</h4><p style="font-family:var(--wp--preset--font-family--newsreader);font-size:1rem;line-height:1.5;color:var(--wp--preset--color--ink-soft);margin:0;">Hand programs a ranked, targetable universe instead of a flat yes/no flag.</p></div>
+				</div>
+			</div>
+		</div>
+		<!-- /wp:html -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- ======================== THE OUTCOME ======================== -->
+
+	<!-- wp:html -->
+	<section style="border-top:1px solid var(--wp--preset--color--line);padding:88px 48px;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;">
+		<div>
+			<div class="eyebrow">03 -- The outcome</div>
+			<h2 style="font-family:var(--wp--preset--font-family--archivo);font-weight:800;font-size:clamp(1.75rem, 3.4vw, 2.625rem);line-height:1.08;letter-spacing:-1px;margin:16px 0 20px;">Found isn't the same as reached.</h2>
+			<p style="font-family:var(--wp--preset--font-family--newsreader);font-size:1.1875rem;line-height:1.6;color:var(--wp--preset--color--ink-muted);margin:0 0 18px;">A bigger universe only matters if someone talks to it. We handed the re-based file to <strong><a href="https://www.aapivictoryfund.org">AAPI Victory Fund</a></strong> and the affinity groups already trusted inside these communities, and they ran the contact -- by canvass, phone, and text, in the languages and idioms that actually land.</p>
+			<p style="font-family:var(--wp--preset--font-family--newsreader);font-size:1.1875rem;line-height:1.6;color:var(--wp--preset--color--ink-muted);margin:0;">During early vote alone, that program reached roughly <strong>65,000</strong> voters who had never before been contacted in a culturally fluent way -- people the old model had never even flagged. This is what <a href="/polling-as-ethnography/">polling as ethnography</a> looks like carried all the way through to the door.</p>
+		</div>
+		<div class="siege-sidebar-card">
+			<div style="font-family:var(--wp--preset--font-family--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--wp--preset--color--mono);">How the universe was worked</div>
+			<div style="display:flex;flex-direction:column;gap:0;font-family:var(--wp--preset--font-family--newsreader);font-size:1rem;color:var(--wp--preset--color--ink-muted);margin-top:6px;">
+				<div style="display:flex;gap:12px;padding:14px 0;border-top:1px solid var(--wp--preset--color--line);"><span style="color:var(--wp--preset--color--rust);font-family:var(--wp--preset--font-family--archivo);font-weight:800;">--</span> Canvass turf cut around real clusters, not zip codes</div>
+				<div style="display:flex;gap:12px;padding:14px 0;border-top:1px solid var(--wp--preset--color--line);"><span style="color:var(--wp--preset--color--rust);font-family:var(--wp--preset--font-family--archivo);font-weight:800;">--</span> Phone banks staffed by in-language volunteers</div>
+				<div style="display:flex;gap:12px;padding:14px 0;border-top:1px solid var(--wp--preset--color--line);"><span style="color:var(--wp--preset--color--rust);font-family:var(--wp--preset--font-family--archivo);font-weight:800;">--</span> Texting keyed to community, not a generic blast</div>
+				<div style="display:flex;gap:12px;padding:14px 0;border-top:1px solid var(--wp--preset--color--line);"><span style="color:var(--wp--preset--color--rust);font-family:var(--wp--preset--font-family--archivo);font-weight:800;">--</span> Trusted messengers, not cold outreach</div>
+			</div>
+			<p style="font-family:var(--wp--preset--font-family--newsreader);font-size:0.96875rem;line-height:1.5;color:var(--wp--preset--color--mono);margin:18px 0 0;font-style:italic;">The data found the voters; the community made the contact real.</p>
+		</div>
+	</section>
+	<!-- /wp:html -->
+
+	<!-- ======================== PULLQUOTE ======================== -->
+
+	<!-- wp:group {"style":{"spacing":{"padding":{"top":"80px","bottom":"80px","left":"48px","right":"48px"}},"border":{"top":{"width":"1px","color":"var:preset|color|line"},"bottom":{"width":"1px","color":"var:preset|color|line"}}},"backgroundColor":"warm-mid","layout":{"type":"constrained","contentSize":"960px"}} -->
+	<div class="wp-block-group has-warm-mid-background-color has-background" style="border-top-color:var(--wp--preset--color--line);border-top-width:1px;border-bottom-color:var(--wp--preset--color--line);border-bottom-width:1px;padding-top:80px;padding-right:48px;padding-bottom:80px;padding-left:48px">
+
+		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--newsreader)","fontStyle":"italic","fontWeight":"500","fontSize":"clamp(1.625rem, 3.6vw, 2.5rem)","lineHeight":"1.25","letterSpacing":"-0.5px"}},"textColor":"ink"} -->
+		<p style="font-family:var(--wp--preset--font-family--newsreader);font-style:italic;font-weight:500;font-size:clamp(1.625rem, 3.6vw, 2.5rem);line-height:1.25;letter-spacing:-0.5px" class="has-ink-color has-text-color">"Dheeraj makes the impossible possible. I come to him with a dream and he makes it into a plan."</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:paragraph {"className":"eyebrow","style":{"spacing":{"margin":{"top":"24px"}}}} -->
+		<p class="eyebrow" style="margin-top:24px">Varun -- <a href="https://www.aapivictoryfund.org">AAPI Victory Fund</a></p>
+		<!-- /wp:paragraph -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- ======================== RELATED ======================== -->
+
+	<!-- wp:group {"style":{"spacing":{"padding":{"top":"88px","bottom":"88px","left":"48px","right":"48px"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+	<div class="wp-block-group" style="padding-top:88px;padding-right:48px;padding-bottom:88px;padding-left:48px">
+
+		<!-- wp:paragraph {"className":"eyebrow","style":{"spacing":{"margin":{"bottom":"32px"}}}} -->
+		<p class="eyebrow" style="margin-bottom:32px">Related</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"32px"}}}} -->
+		<div class="wp-block-columns">
+			<!-- wp:column -->
+			<div class="wp-block-column">
+				<!-- wp:html -->
+				<a href="/polling-as-ethnography/" class="siege-related-card">
+					<span style="display:block;font-family:var(--wp--preset--font-family--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--wp--preset--color--link);">Method</span>
+					<h4 style="font-family:var(--wp--preset--font-family--archivo);font-weight:800;font-size:23px;letter-spacing:-0.4px;margin:10px 0 8px;">Polling as ethnography</h4>
+					<p style="font-family:var(--wp--preset--font-family--newsreader);font-size:1rem;line-height:1.5;color:var(--wp--preset--color--ink-soft);margin:0;">Why the right question, asked the right way, beats a bigger sample. <span style="font-family:var(--wp--preset--font-family--mono);font-size:12px;letter-spacing:0.5px;text-transform:uppercase;color:var(--wp--preset--color--link);">Read &rarr;</span></p>
+				</a>
+				<!-- /wp:html -->
+			</div>
+			<!-- /wp:column -->
+			<!-- wp:column -->
+			<div class="wp-block-column">
+				<!-- wp:html -->
+				<a href="/boundary-estimation/" class="siege-related-card">
+					<span style="display:block;font-family:var(--wp--preset--font-family--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--wp--preset--color--green-deep);">Method</span>
+					<h4 style="font-family:var(--wp--preset--font-family--archivo);font-weight:800;font-size:23px;letter-spacing:-0.4px;margin:10px 0 8px;">Boundary estimation</h4>
+					<p style="font-family:var(--wp--preset--font-family--newsreader);font-size:1rem;line-height:1.5;color:var(--wp--preset--color--ink-soft);margin:0;">We make accurate, standards-compliant maps from your list. <span style="font-family:var(--wp--preset--font-family--mono);font-size:12px;letter-spacing:0.5px;text-transform:uppercase;color:var(--wp--preset--color--green-deep);">Read &rarr;</span></p>
+				</a>
+				<!-- /wp:html -->
+			</div>
+			<!-- /wp:column -->
+		</div>
+		<!-- /wp:columns -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- ======================== CTA ======================== -->
+
+	<!-- wp:group {"className":"siege-cta-band","style":{"spacing":{"padding":{"top":"88px","bottom":"88px","left":"48px","right":"48px"}}},"layout":{"type":"constrained","contentSize":"1000px"}} -->
+	<div class="wp-block-group siege-cta-band" style="padding-top:88px;padding-right:48px;padding-bottom:88px;padding-left:48px">
+
+		<!-- wp:paragraph {"className":"eyebrow"} -->
+		<p class="eyebrow">Start here</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:heading {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--archivo)","fontWeight":"800","fontSize":"clamp(2rem, 5vw, 3.625rem)","lineHeight":"1.02","letterSpacing":"-1.5px"},"spacing":{"margin":{"top":"20px"}}}} -->
+		<h2 class="wp-block-heading" style="font-family:var(--wp--preset--font-family--archivo);font-weight:800;font-size:clamp(2rem, 5vw, 3.625rem);line-height:1.02;letter-spacing:-1.5px;margin-top:20px">Who's missing from your map?</h2>
+		<!-- /wp:heading -->
+
+		<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"36px"}}}} -->
+		<div class="wp-block-buttons" style="margin-top:36px">
+			<!-- wp:button {"style":{"color":{"background":"#97C148","text":"#16150f"},"typography":{"fontFamily":"var(--wp--preset--font-family--archivo)","fontWeight":"700","fontSize":"0.9375rem","letterSpacing":"0.5px"},"border":{"radius":"0px"},"spacing":{"padding":{"top":"16px","bottom":"16px","left":"34px","right":"34px"}}}} -->
+			<div class="wp-block-button"><a class="wp-block-button__link has-text-color has-background wp-element-button" href="/contact/" style="border-radius:0px;color:#16150f;background-color:#97C148;padding-top:16px;padding-right:34px;padding-bottom:16px;padding-left:34px;font-family:var(--wp--preset--font-family--archivo);font-weight:700;font-size:0.9375rem;letter-spacing:0.5px">Request scoping &rarr;</a></div>
+			<!-- /wp:button -->
+		</div>
+		<!-- /wp:buttons -->
+
+	</div>
+	<!-- /wp:group -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","area":"footer"} /-->

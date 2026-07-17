@@ -1,49 +1,125 @@
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
 
-<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
-<main class="wp-block-group">
-	<!-- wp:query {"queryId":1,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true}} -->
-	<div class="wp-block-query">
+<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"80px","bottom":"0"}}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+<main class="wp-block-group" style="padding-top:80px">
 
-		<!-- wp:group {"style":{"spacing":{"padding":{"top":"4rem","bottom":"2rem"}}},"layout":{"type":"constrained"}} -->
-		<div class="wp-block-group" style="padding-top:4rem;padding-bottom:2rem">
-			<!-- wp:heading {"level":1,"textColor":"primary","style":{"typography":{"fontFamily":"var(--wp--preset--font-family--makhina)"}}} -->
-			<h1 class="wp-block-heading has-primary-color has-text-color" style="font-family:var(--wp--preset--font-family--makhina)">Blog</h1>
+	<!-- wp:group {"style":{"spacing":{"padding":{"left":"48px","right":"48px"}}},"layout":{"type":"default"}} -->
+	<div class="wp-block-group" style="padding-left:48px;padding-right:48px">
+
+		<!-- wp:paragraph {"className":"eyebrow","style":{"spacing":{"margin":{"bottom":"22px"}}}} -->
+		<p class="eyebrow" style="margin-bottom:22px">Field notes</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:heading {"level":1,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--archivo)","fontWeight":"900","fontSize":"clamp(2.6rem, 6vw, 5.25rem)","lineHeight":"1","letterSpacing":"-2px"},"spacing":{"margin":{"bottom":"30px"}}},"textColor":"ink"} -->
+		<h1 class="wp-block-heading has-ink-color has-text-color" style="font-family:var(--wp--preset--font-family--archivo);font-weight:900;font-size:clamp(2.6rem, 6vw, 5.25rem);line-height:1;letter-spacing:-2px;margin-bottom:30px">The Blog.</h1>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--newsreader)","fontSize":"1.375rem","lineHeight":"1.5"},"spacing":{"margin":{"bottom":"30px"}}},"textColor":"ink-muted"} -->
+		<p style="font-family:var(--wp--preset--font-family--newsreader);font-size:1.375rem;line-height:1.5;margin-bottom:30px" class="has-ink-muted-color has-text-color">Notes from the field on precinct boundaries, spatial data, and the craft of turning lists into maps.</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:html -->
+		<div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px;">
+			<a href="/blog/" class="siege-chip active">All</a>
+			<a href="/category/method/" class="siege-chip">Method</a>
+			<a href="/category/field-notes/" class="siege-chip">Field notes</a>
+			<a href="/category/data/" class="siege-chip">Data</a>
+			<a href="/category/elections/" class="siege-chip">Elections</a>
+		</div>
+		<!-- /wp:html -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:group {"style":{"spacing":{"padding":{"left":"48px","right":"48px","bottom":"40px"}}},"layout":{"type":"default"}} -->
+	<div class="wp-block-group" style="padding-left:48px;padding-right:48px;padding-bottom:40px">
+
+		<!-- wp:query {"queryId":1,"query":{"perPage":9,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":true},"layout":{"type":"default"}} -->
+		<div class="wp-block-query">
+
+			<!-- wp:post-template {"className":"siege-card-grid-3","layout":{"type":"grid","columnCount":3}} -->
+
+				<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"30px","left":"0","right":"0"}},"border":{"width":"0px","style":"none"}},"backgroundColor":"card","layout":{"type":"default"}} -->
+				<div class="wp-block-group has-card-background-color has-background" style="border-style:none;border-width:0px;padding-top:0;padding-right:0;padding-bottom:30px;padding-left:0">
+
+					<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/10","style":{"spacing":{"margin":{"bottom":"0"}},"border":{"radius":"0px"}}} /-->
+
+					<!-- wp:group {"style":{"spacing":{"padding":{"top":"26px","bottom":"0","left":"28px","right":"28px"}}},"layout":{"type":"default"}} -->
+					<div class="wp-block-group" style="padding-top:26px;padding-left:28px;padding-right:28px">
+
+						<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"8px"}}} -->
+						<div class="wp-block-group">
+							<!-- wp:post-terms {"term":"category","style":{"typography":{"fontFamily":"var(--wp--preset--font-family--mono)","fontSize":"0.6875rem","letterSpacing":"1.5px","textTransform":"uppercase"}},"textColor":"mono"} /-->
+							<!-- wp:html -->
+							<span style="font-family:var(--wp--preset--font-family--mono);font-size:0.6875rem;letter-spacing:1.5px;text-transform:uppercase;color:#6b675c;">·</span>
+							<!-- /wp:html -->
+							<!-- wp:post-date {"format":"M Y","style":{"typography":{"fontFamily":"var(--wp--preset--font-family--mono)","fontSize":"0.6875rem","letterSpacing":"1.5px","textTransform":"uppercase"}},"textColor":"mono"} /-->
+						</div>
+						<!-- /wp:group -->
+
+						<!-- wp:post-title {"isLink":true,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--archivo)","fontWeight":"800","fontSize":"1.375rem","lineHeight":"1.12","letterSpacing":"-0.5px"},"spacing":{"margin":{"top":"12px"}}},"textColor":"ink"} /-->
+
+						<!-- wp:post-excerpt {"excerptLength":20,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--newsreader)","fontSize":"1rem","lineHeight":"1.55"},"spacing":{"margin":{"top":"12px"}}},"textColor":"ink-faint"} /-->
+
+					</div>
+					<!-- /wp:group -->
+
+				</div>
+				<!-- /wp:group -->
+
+			<!-- /wp:post-template -->
+
+			<!-- wp:query-no-results -->
+				<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--newsreader)","fontSize":"1.25rem"}},"textColor":"mono"} -->
+				<p style="font-family:var(--wp--preset--font-family--newsreader);font-size:1.25rem" class="has-mono-color has-text-color">No posts yet.</p>
+				<!-- /wp:paragraph -->
+			<!-- /wp:query-no-results -->
+
+			<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"44px","bottom":"88px"}}}} -->
+				<!-- wp:query-pagination-previous /-->
+				<!-- wp:query-pagination-numbers /-->
+				<!-- wp:query-pagination-next /-->
+			<!-- /wp:query-pagination -->
+
+		</div>
+		<!-- /wp:query -->
+
+	</div>
+	<!-- /wp:group -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"siege-cta-band","style":{"spacing":{"padding":{"top":"80px","bottom":"80px","left":"48px","right":"48px"}}},"backgroundColor":"ink","layout":{"type":"constrained","contentSize":"1000px"}} -->
+<div class="wp-block-group siege-cta-band has-ink-background-color has-background" style="padding-top:80px;padding-right:48px;padding-bottom:80px;padding-left:48px">
+
+	<!-- wp:group {"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap","verticalAlignment":"bottom"},"style":{"spacing":{"blockGap":"28px"}}} -->
+	<div class="wp-block-group">
+
+		<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
+		<div class="wp-block-group">
+			<!-- wp:paragraph {"className":"eyebrow","style":{"spacing":{"margin":{"bottom":"16px"}}},"textColor":"mono-dim"} -->
+			<p class="eyebrow has-mono-dim-color has-text-color" style="margin-bottom:16px">Need shapes?</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:heading {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--archivo)","fontWeight":"800","fontSize":"clamp(1.875rem, 4vw, 3.25rem)","lineHeight":"1.02","letterSpacing":"-1.5px"}},"textColor":"green-pale"} -->
+			<h2 class="wp-block-heading has-green-pale-color has-text-color" style="font-family:var(--wp--preset--font-family--archivo);font-weight:800;font-size:clamp(1.875rem, 4vw, 3.25rem);line-height:1.02;letter-spacing:-1.5px">Send us your project.</h2>
 			<!-- /wp:heading -->
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:post-template {"layout":{"type":"default"}} -->
-
-			<!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","bottom":"2rem"},"margin":{"bottom":"2rem"}},"border":{"bottom":{"width":"1px","style":"solid","color":"var(--wp--preset--color--terminal-grey)"}}},"layout":{"type":"constrained"}} -->
-			<div class="wp-block-group" style="border-bottom:1px solid var(--wp--preset--color--terminal-grey);margin-bottom:2rem;padding-top:2rem;padding-bottom:2rem">
-
-				<!-- wp:post-date {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--terminal)","fontSize":"0.8rem"}},"textColor":"mid-grey"} /-->
-
-				<!-- wp:post-title {"isLink":true,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--norwester)","fontSize":"1.75rem"}},"textColor":"primary"} /-->
-
-				<!-- wp:post-excerpt {"moreText":"Read more →","excerptLength":40,"style":{"typography":{"fontSize":"0.95rem"}},"textColor":"readout"} /-->
-
-			</div>
-			<!-- /wp:group -->
-
-		<!-- /wp:post-template -->
-
-		<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"},"textColor":"primary"} -->
-			<!-- wp:query-pagination-previous /-->
-			<!-- wp:query-pagination-numbers /-->
-			<!-- wp:query-pagination-next /-->
-		<!-- /wp:query-pagination -->
-
-		<!-- wp:query-no-results -->
-			<!-- wp:paragraph {"textColor":"mid-grey"} -->
-			<p class="has-mid-grey-color has-text-color">No posts yet.</p>
-			<!-- /wp:paragraph -->
-		<!-- /wp:query-no-results -->
+		<!-- wp:buttons -->
+		<div class="wp-block-buttons">
+			<!-- wp:button {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--archivo)","fontWeight":"700","fontSize":"0.9375rem","letterSpacing":"0.5px"},"color":{"background":"#97C148","text":"#16150f"},"border":{"radius":"0px"},"spacing":{"padding":{"top":"16px","bottom":"16px","left":"34px","right":"34px"}}}} -->
+			<div class="wp-block-button" style="font-family:var(--wp--preset--font-family--archivo);font-weight:700;font-size:0.9375rem"><a class="wp-block-button__link has-text-color has-background wp-element-button" href="/contact/" style="border-radius:0px;color:#16150f;background-color:#97C148;padding-top:16px;padding-right:34px;padding-bottom:16px;padding-left:34px">Get in touch &rarr;</a></div>
+			<!-- /wp:button -->
+		</div>
+		<!-- /wp:buttons -->
 
 	</div>
-	<!-- /wp:query -->
-</main>
+	<!-- /wp:group -->
+
+</div>
 <!-- /wp:group -->
 
 <!-- wp:template-part {"slug":"footer","area":"footer"} /-->
