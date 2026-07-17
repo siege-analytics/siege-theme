@@ -1,120 +1,82 @@
 /*
- * Siege Analytics — CRT Terminal Aesthetic
- * Inspired by DoD war games displays, green phosphor monitors
+ * Siege Analytics -- Light Editorial
  */
-
-/* ===========================
-   GLOBAL CRT FEEL
-   =========================== */
 
 html {
 	scroll-behavior: smooth;
 }
 
-/* Subtle text glow on headings — phosphor effect */
-h1, h2 {
-	text-shadow: 0 0 8px rgba(151, 193, 72, 0.3);
-}
-
-h3 {
-	text-shadow: 0 0 6px rgba(222, 229, 131, 0.2);
+::selection {
+	background: var(--wp--preset--color--selection);
 }
 
 /* ===========================
-   HERO SECTION
+   STICKY HEADER
    =========================== */
 
-.siege-hero {
-	position: relative;
-	overflow: hidden;
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 50;
+	background: rgba(243, 239, 230, 0.92);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border-bottom: 1px solid var(--wp--preset--color--line);
 }
 
-.siege-hero::before {
+.admin-bar .site-header {
+	top: 32px;
+}
+
+@media (max-width: 782px) {
+	.admin-bar .site-header {
+		top: 46px;
+	}
+}
+
+/* ===========================
+   LOGO MARK (CSS placeholder until final logo)
+   =========================== */
+
+.siege-logo-mark {
+	position: relative;
+	width: 18px;
+	height: 18px;
+	flex-shrink: 0;
+	display: inline-block;
+}
+
+.siege-logo-mark::before {
 	content: "";
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: repeating-linear-gradient(
-		0deg,
-		rgba(0, 0, 0, 0.08) 0px,
-		rgba(0, 0, 0, 0.08) 1px,
-		transparent 1px,
-		transparent 3px
-	);
-	pointer-events: none;
-	z-index: 1;
+	inset: 1px;
+	transform: rotate(45deg);
+	border: 2px solid var(--wp--preset--color--green-deep);
 }
 
-/* ===========================
-   DATA READOUT — metrics blocks
-   =========================== */
-
-.siege-readout {
-	font-family: var(--wp--preset--font-family--terminal);
-	color: var(--wp--preset--color--primary);
-	background: var(--wp--preset--color--black);
-	border: 1px solid var(--wp--preset--color--terminal-grey);
-	padding: 1.5rem 2rem;
-	position: relative;
+.siege-logo-mark::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 5px;
+	height: 5px;
+	background: var(--wp--preset--color--rust);
+	transform: translate(-50%, -50%);
 }
 
-.siege-readout::before {
-	content: "▸ ";
-	color: var(--wp--preset--color--accent);
+.siege-wordmark {
+	font-family: var(--wp--preset--font-family--archivo);
+	font-weight: 800;
+	font-size: 17px;
+	letter-spacing: 1px;
+	color: var(--wp--preset--color--ink);
+	text-decoration: none;
 }
 
-/* ===========================
-   SECTION DIVIDERS
-   =========================== */
-
-.siege-section-divider {
-	border: none;
-	height: 1px;
-	background: linear-gradient(
-		90deg,
-		transparent 0%,
-		var(--wp--preset--color--primary) 20%,
-		var(--wp--preset--color--primary) 80%,
-		transparent 100%
-	);
-	margin: 3rem 0;
-}
-
-/* ===========================
-   CONTENT SECTIONS
-   =========================== */
-
-/* Light reading sections — invert for readability on long content */
-.siege-light-section {
-	background: var(--wp--preset--color--light-grey);
-	color: var(--wp--preset--color--black);
-}
-
-.siege-light-section h2,
-.siege-light-section h3,
-.siege-light-section h4 {
-	color: var(--wp--preset--color--black);
-}
-
-.siege-light-section p {
-	color: var(--wp--preset--color--black);
-}
-
-/* ===========================
-   BUTTONS — terminal style
-   =========================== */
-
-.wp-block-button__link {
-	transition: all 0.3s ease;
-	position: relative;
-}
-
-.wp-block-button__link:hover {
-	background: var(--wp--preset--color--primary) !important;
-	color: var(--wp--preset--color--black) !important;
-	box-shadow: 0 0 12px rgba(151, 193, 72, 0.4);
+.siege-wordmark span {
+	font-weight: 500;
+	color: var(--wp--preset--color--ink-muted);
 }
 
 /* ===========================
@@ -122,11 +84,193 @@ h3 {
    =========================== */
 
 .wp-block-navigation a {
-	transition: all 0.3s ease;
+	transition: color 0.2s ease;
 }
 
 .wp-block-navigation a:hover {
-	text-shadow: 0 0 8px rgba(151, 193, 72, 0.5);
+	color: var(--wp--preset--color--ink) !important;
+}
+
+/* CTA button in nav */
+.nav-cta a {
+	font-family: var(--wp--preset--font-family--archivo);
+	font-weight: 700;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	background: var(--wp--preset--color--green-deep);
+	color: var(--wp--preset--color--paper) !important;
+	padding: 10px 18px;
+	text-decoration: none;
+	transition: background 0.2s ease;
+}
+
+.nav-cta a:hover {
+	background: var(--wp--preset--color--ink);
+	color: var(--wp--preset--color--paper) !important;
+}
+
+/* Mobile hamburger menu override colors */
+.wp-block-navigation__responsive-container.is-menu-open {
+	background: var(--wp--preset--color--paper);
+}
+
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a {
+	color: var(--wp--preset--color--ink-muted);
+}
+
+/* ===========================
+   EYEBROW (mono uppercase labels)
+   =========================== */
+
+.eyebrow {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 13px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--mono);
+}
+
+/* ===========================
+   BUTTONS
+   =========================== */
+
+.wp-block-button__link {
+	transition: all 0.2s ease;
+	border-radius: 0 !important;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+	border: 1.5px solid var(--wp--preset--color--ink);
+	color: var(--wp--preset--color--ink);
+	background: transparent;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:hover {
+	background: var(--wp--preset--color--ink);
+	color: var(--wp--preset--color--paper);
+	border-color: var(--wp--preset--color--ink);
+}
+
+/* ===========================
+   CARD GRID (hairline gridlines)
+   =========================== */
+
+.siege-card-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1px;
+	background: var(--wp--preset--color--line-2);
+	border: 1px solid var(--wp--preset--color--line-2);
+}
+
+.siege-card-grid > * {
+	background: var(--wp--preset--color--card);
+	padding: 34px 32px;
+}
+
+/* 3-col for blog cards */
+.siege-card-grid-3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1px;
+	background: var(--wp--preset--color--line-2);
+	border: 1px solid var(--wp--preset--color--line-2);
+}
+
+.siege-card-grid-3 > * {
+	background: var(--wp--preset--color--paper);
+}
+
+/* ===========================
+   DARK SECTIONS
+   =========================== */
+
+.siege-dark-section {
+	background: var(--wp--preset--color--ink);
+	color: var(--wp--preset--color--paper);
+}
+
+.siege-dark-section h2 {
+	color: var(--wp--preset--color--green-pale);
+}
+
+.siege-dark-section p {
+	color: #e6e2d6;
+}
+
+.siege-dark-section .eyebrow {
+	color: var(--wp--preset--color--mono-dim);
+}
+
+/* Dark CTA band */
+.siege-cta-band {
+	background: var(--wp--preset--color--ink);
+	color: var(--wp--preset--color--paper);
+}
+
+.siege-cta-band h2 {
+	color: var(--wp--preset--color--green-pale);
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+
+.site-footer {
+	background: var(--wp--preset--color--footer);
+	color: var(--wp--preset--color--mono-dim);
+}
+
+.site-footer a {
+	color: var(--wp--preset--color--mono-dim);
+	text-decoration: none;
+}
+
+.site-footer a:hover {
+	color: var(--wp--preset--color--paper);
+}
+
+/* ===========================
+   PROSE STYLING (single post content)
+   =========================== */
+
+.entry-content p {
+	font-family: var(--wp--preset--font-family--newsreader);
+	font-size: 1.25rem;
+	line-height: 1.62;
+	color: var(--wp--preset--color--ink-soft);
+}
+
+/* Drop cap on first paragraph */
+.entry-content > p:first-of-type::first-letter {
+	font-family: var(--wp--preset--font-family--archivo);
+	font-weight: 900;
+	font-size: 3.5em;
+	line-height: 0.8;
+	float: left;
+	margin: 0.05em 0.12em 0 0;
+	color: var(--wp--preset--color--ink);
+}
+
+.entry-content blockquote {
+	border-left: 3px solid var(--wp--preset--color--green-deep);
+	padding-left: 1.5rem;
+	margin: 2rem 0;
+}
+
+.entry-content blockquote p {
+	font-style: italic;
+	color: var(--wp--preset--color--ink-muted);
+	font-size: 1.3rem;
+}
+
+.entry-content figure figcaption {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 0.75rem;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--mono);
+	margin-top: 0.5rem;
 }
 
 /* ===========================
@@ -135,60 +279,82 @@ h3 {
 
 .wp-block-post-title a {
 	text-decoration: none;
-	transition: text-shadow 0.3s ease;
+	color: var(--wp--preset--color--ink);
+	transition: color 0.2s ease;
 }
 
 .wp-block-post-title a:hover {
-	text-shadow: 0 0 10px rgba(151, 193, 72, 0.4);
+	color: var(--wp--preset--color--green-deep);
 }
 
-/* ===========================
-   BLOCKQUOTES — command prompt style
-   =========================== */
-
-blockquote {
-	font-style: normal !important;
-}
-
-blockquote p::before {
-	content: "// ";
-	font-family: var(--wp--preset--font-family--terminal);
-	color: var(--wp--preset--color--mid-grey);
-}
-
-/* ===========================
-   CODE BLOCKS
-   =========================== */
-
-pre.wp-block-code {
-	border-radius: 0;
-	position: relative;
-}
-
-pre.wp-block-code::before {
-	content: "terminal";
-	position: absolute;
-	top: 0;
-	right: 0;
-	font-family: var(--wp--preset--font-family--terminal);
-	font-size: 0.65rem;
-	color: var(--wp--preset--color--mid-grey);
-	padding: 0.25rem 0.5rem;
-	text-transform: uppercase;
+/* Read time meta */
+.read-time {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 0.75rem;
 	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--mono);
 }
 
 /* ===========================
-   SELECTION COLOR
+   CATEGORY FILTER CHIPS
    =========================== */
 
-::selection {
-	background: var(--wp--preset--color--primary);
-	color: var(--wp--preset--color--black);
+.siege-chip {
+	display: inline-block;
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 0.75rem;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	padding: 8px 16px;
+	border: 1px solid var(--wp--preset--color--line-3);
+	color: var(--wp--preset--color--ink-muted);
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+.siege-chip:hover,
+.siege-chip.active {
+	background: var(--wp--preset--color--green-deep);
+	color: var(--wp--preset--color--paper);
+	border-color: var(--wp--preset--color--green-deep);
 }
 
 /* ===========================
-   SCROLLBAR — dark theme
+   FEATURED TAG
+   =========================== */
+
+.siege-featured-tag {
+	display: inline-block;
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 0.6875rem;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	padding: 5px 12px;
+	background: var(--wp--preset--color--rust);
+	color: var(--wp--preset--color--white);
+}
+
+/* ===========================
+   AUDIENCE COLUMNS (top-border list)
+   =========================== */
+
+.siege-audience-col {
+	border-top: 2px solid var(--wp--preset--color--green-deep);
+	padding-top: 1.5rem;
+}
+
+/* ===========================
+   AUTHOR BIO CARD
+   =========================== */
+
+.siege-author-card {
+	background: var(--wp--preset--color--card);
+	padding: 2rem;
+}
+
+/* ===========================
+   SCROLLBAR
    =========================== */
 
 ::-webkit-scrollbar {
@@ -196,24 +362,837 @@ pre.wp-block-code::before {
 }
 
 ::-webkit-scrollbar-track {
-	background: var(--wp--preset--color--black);
+	background: var(--wp--preset--color--paper);
 }
 
 ::-webkit-scrollbar-thumb {
-	background: var(--wp--preset--color--terminal-grey);
-	border: 1px solid var(--wp--preset--color--terminal-grey);
+	background: var(--wp--preset--color--line);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: var(--wp--preset--color--primary);
+	background: var(--wp--preset--color--line-3);
 }
 
 /* ===========================
-   RESPONSIVE ADJUSTMENTS
+   FEATURED POST (blog archive hero card)
    =========================== */
 
-@media (max-width: 768px) {
-	h1 {
-		text-shadow: 0 0 4px rgba(151, 193, 72, 0.2);
+.siege-featured-post .wp-block-post-template {
+	display: block;
+}
+
+.siege-featured-post .wp-block-post-featured-image {
+	height: 100%;
+	min-height: 360px;
+}
+
+.siege-featured-post .wp-block-post-featured-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* ===========================
+   QUERY PAGINATION
+   =========================== */
+
+.wp-block-query-pagination {
+	gap: 8px;
+}
+
+.wp-block-query-pagination .page-numbers,
+.wp-block-query-pagination a {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 13px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 40px;
+	height: 40px;
+	padding: 0 12px;
+	border: 1px solid var(--wp--preset--color--line-3);
+	color: var(--wp--preset--color--ink-faint);
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+.wp-block-query-pagination .page-numbers.current,
+.wp-block-query-pagination .page-numbers:hover,
+.wp-block-query-pagination a:hover {
+	background: var(--wp--preset--color--green-deep);
+	color: var(--wp--preset--color--paper);
+	border-color: var(--wp--preset--color--green-deep);
+}
+
+/* ===========================
+   SERVICE DETAIL ROWS
+   =========================== */
+
+.siege-service-row {
+	display: grid;
+	grid-template-columns: 0.9fr 1.4fr;
+	gap: 56px;
+	padding: 64px 0;
+	border-top: 1px solid var(--wp--preset--color--line);
+}
+
+.siege-service-number {
+	font-family: var(--wp--preset--font-family--archivo);
+	font-weight: 900;
+	font-size: 64px;
+	line-height: 1;
+	letter-spacing: -2px;
+}
+
+.siege-service-tag {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 11px;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--rust);
+	margin-bottom: 10px;
+}
+
+.siege-service-subtitle {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--mono);
+	margin-top: 14px;
+}
+
+.siege-capability-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2px;
+	background: var(--wp--preset--color--line-2);
+	border: 1px solid var(--wp--preset--color--line-2);
+}
+
+.siege-capability-grid > div {
+	background: var(--wp--preset--color--card);
+	padding: 16px 18px;
+	font-family: var(--wp--preset--font-family--newsreader);
+	font-size: 1rem;
+	color: var(--wp--preset--color--ink-soft);
+}
+
+.siege-tech-chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.siege-tech-chips span {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 14px;
+	border: 1px solid var(--wp--preset--color--line-2);
+	padding: 8px 14px;
+	color: var(--wp--preset--color--ink-soft);
+}
+
+/* ===========================
+   PROCESS STEPS (dark section)
+   =========================== */
+
+.siege-process-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 40px;
+}
+
+.siege-process-step-number {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 13px;
+	color: var(--wp--preset--color--green-phosphor);
+}
+
+/* ===========================
+   TEAM CARD (dark founder)
+   =========================== */
+
+.siege-founder-card {
+	display: grid;
+	grid-template-columns: 300px 1fr;
+	gap: 0;
+	background: var(--wp--preset--color--ink);
+	color: var(--wp--preset--color--paper);
+}
+
+/* ===========================
+   TEAM GRID
+   =========================== */
+
+.siege-team-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 40px;
+}
+
+/* ===========================
+   TESTIMONIAL GRID (dark)
+   =========================== */
+
+.siege-testimonial-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 40px;
+}
+
+.siege-testimonial-item {
+	border-top: 1px solid #3a382e;
+	padding-top: 22px;
+}
+
+/* ===========================
+   PARTNER GRID
+   =========================== */
+
+.siege-partner-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1px;
+	background: var(--wp--preset--color--line-2);
+	border: 1px solid var(--wp--preset--color--line-2);
+}
+
+.siege-partner-grid > div {
+	background: var(--wp--preset--color--card);
+	padding: 26px 22px;
+}
+
+/* ===========================
+   CONTACT FORM
+   =========================== */
+
+.siege-form-card {
+	border: 1px solid var(--wp--preset--color--line-2);
+	background: #fff;
+	padding: 38px 36px;
+}
+
+.siege-form-card input,
+.siege-form-card textarea,
+.siege-form-card select {
+	width: 100%;
+	padding: 13px 14px;
+	font-family: var(--wp--preset--font-family--newsreader);
+	font-size: 1rem;
+	color: var(--wp--preset--color--ink);
+	background: var(--wp--preset--color--card);
+	border: 1px solid var(--wp--preset--color--line-2);
+	border-radius: 0;
+}
+
+.siege-form-card input:focus,
+.siege-form-card textarea:focus,
+.siege-form-card select:focus {
+	outline: none;
+	border-color: var(--wp--preset--color--green-deep);
+	box-shadow: 0 0 0 3px rgba(60, 90, 58, 0.12);
+}
+
+.siege-form-label {
+	display: block;
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--mono);
+	margin-bottom: 8px;
+}
+
+/* ===========================
+   CASE STUDY: STATS STRIP
+   =========================== */
+
+.siege-stats-strip {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1px;
+	background: var(--wp--preset--color--line-2);
+	border-top: 1px solid var(--wp--preset--color--line-2);
+	border-bottom: 1px solid var(--wp--preset--color--line-2);
+}
+
+.siege-stat-cell {
+	background: var(--wp--preset--color--paper);
+	padding: 32px 28px;
+	text-align: center;
+}
+
+.siege-stat-value {
+	font-family: var(--wp--preset--font-family--archivo);
+	font-weight: 900;
+	font-size: clamp(2rem, 4vw, 3rem);
+	line-height: 1;
+	letter-spacing: -1px;
+	color: var(--wp--preset--color--green-deep);
+	margin: 0 0 8px;
+}
+
+.siege-stat-label {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 12px;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--mono);
+	margin: 0;
+}
+
+/* ===========================
+   CASE STUDY: METHOD STEPS
+   =========================== */
+
+.siege-method-steps {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+
+.siege-method-step {
+	display: flex;
+	gap: 18px;
+	align-items: baseline;
+	padding: 20px 0;
+	border-top: 1px solid #3a382e;
+}
+
+.siege-method-step:last-child {
+	border-bottom: 1px solid #3a382e;
+}
+
+.siege-method-step-num {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 13px;
+	color: var(--wp--preset--color--green-phosphor);
+	flex-shrink: 0;
+}
+
+.siege-method-step p {
+	margin: 0;
+}
+
+/* ===========================
+   CASE STUDY: SIDEBAR CARD
+   =========================== */
+
+.siege-sidebar-card {
+	background: var(--wp--preset--color--warm-mid);
+	padding: 32px 28px;
+}
+
+.siege-sidebar-card h4 {
+	font-family: var(--wp--preset--font-family--archivo);
+	font-weight: 800;
+	font-size: 1rem;
+	margin: 0 0 12px;
+	color: var(--wp--preset--color--ink);
+}
+
+.siege-sidebar-card p {
+	font-family: var(--wp--preset--font-family--newsreader);
+	font-size: 1rem;
+	line-height: 1.55;
+	color: var(--wp--preset--color--ink-soft);
+	margin: 0;
+}
+
+/* ===========================
+   CASE STUDY: STEP CARDS
+   =========================== */
+
+.siege-step-cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 24px;
+}
+
+.siege-step-card {
+	border: 1px solid var(--wp--preset--color--line-2);
+	background: var(--wp--preset--color--paper);
+	overflow: hidden;
+}
+
+.siege-step-card--highlight {
+	border-color: var(--wp--preset--color--green-deep);
+	border-width: 2px;
+}
+
+.siege-step-card-header {
+	padding: 22px 24px;
+	border-bottom: 1px solid var(--wp--preset--color--line-2);
+}
+
+.siege-step-card-header .eyebrow {
+	margin: 0 0 6px;
+}
+
+.siege-step-card-header h3 {
+	font-family: var(--wp--preset--font-family--archivo);
+	font-weight: 800;
+	font-size: 1.25rem;
+	margin: 0;
+	color: var(--wp--preset--color--ink);
+}
+
+.siege-step-card-image {
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	overflow: hidden;
+	background: var(--wp--preset--color--warm-mid);
+}
+
+.siege-step-card-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.siege-step-card-body {
+	padding: 22px 24px;
+}
+
+.siege-step-card-body p {
+	font-family: var(--wp--preset--font-family--newsreader);
+	font-size: 1rem;
+	line-height: 1.55;
+	color: var(--wp--preset--color--ink-soft);
+	margin: 0;
+}
+
+/* ===========================
+   CASE STUDY: BENEFIT STRIP
+   =========================== */
+
+.siege-benefit-strip {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 40px;
+}
+
+.siege-benefit-strip > div {
+	border-top: 3px solid var(--wp--preset--color--green-deep);
+	padding-top: 18px;
+}
+
+.siege-benefit-strip h4 {
+	font-family: var(--wp--preset--font-family--archivo);
+	font-weight: 800;
+	font-size: 1rem;
+	margin: 0 0 8px;
+	color: var(--wp--preset--color--ink);
+}
+
+.siege-benefit-strip p {
+	font-family: var(--wp--preset--font-family--newsreader);
+	font-size: 1rem;
+	line-height: 1.55;
+	color: var(--wp--preset--color--ink-soft);
+	margin: 0;
+}
+
+/* ===========================
+   CASE STUDY: RELATED CARDS
+   =========================== */
+
+.siege-related-card {
+	display: block;
+	border: 1px solid var(--wp--preset--color--line-2);
+	padding: 24px 22px;
+	text-decoration: none;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.siege-related-card:hover {
+	border-color: var(--wp--preset--color--green-deep);
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.siege-related-card .eyebrow {
+	margin: 0 0 8px;
+}
+
+.siege-related-card h4 {
+	font-family: var(--wp--preset--font-family--archivo);
+	font-weight: 800;
+	font-size: 1.05rem;
+	margin: 0 0 8px;
+	color: var(--wp--preset--color--ink);
+}
+
+.siege-related-card p {
+	font-family: var(--wp--preset--font-family--newsreader);
+	font-size: 0.95rem;
+	line-height: 1.5;
+	color: var(--wp--preset--color--ink-soft);
+	margin: 0;
+}
+
+/* ===========================
+   CASE STUDY: LENS GRID (image comparison)
+   =========================== */
+
+.siege-lens-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 24px;
+}
+
+.siege-lens-figure {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+
+.siege-lens-image {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	overflow: hidden;
+	background: var(--wp--preset--color--warm-mid);
+}
+
+.siege-lens-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.siege-lens-figure figcaption {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--mono);
+	padding: 12px 0;
+	border-bottom: 1px solid var(--wp--preset--color--line);
+}
+
+.siege-lens-caption {
+	padding: 12px 0;
+	border-bottom: 1px solid var(--wp--preset--color--line);
+}
+
+/* ===========================
+   WP BLOCK OVERRIDES (case studies)
+   =========================== */
+
+.siege-step-cards.wp-block-group {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 24px;
+	padding: 0;
+}
+
+.siege-step-card.wp-block-group {
+	padding: 0;
+	border: 1px solid var(--wp--preset--color--line-2);
+	background: var(--wp--preset--color--paper);
+	overflow: hidden;
+}
+
+.siege-step-card.wp-block-group > * {
+	margin-block: 0;
+}
+
+.siege-step-card--highlight.wp-block-group {
+	border-color: var(--wp--preset--color--green-deep);
+	border-width: 2px;
+}
+
+.siege-step-card .wp-block-image {
+	margin: 0;
+}
+
+.siege-step-card .wp-block-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.siege-lens-grid.wp-block-columns {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 24px;
+}
+
+.siege-lens-figure.wp-block-column {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+
+.siege-lens-figure .wp-block-image {
+	margin: 0;
+}
+
+.siege-case-map.wp-block-image {
+	margin: 0;
+}
+
+.siege-case-map.wp-block-image img {
+	border: 1px solid #2b2a22;
+	background: #0e0e0e;
+	width: 100%;
+	display: block;
+}
+
+.siege-case-map.wp-block-image figcaption {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 11px;
+	letter-spacing: 0.5px;
+	color: var(--wp--preset--color--mono-dim);
+	margin-top: 10px;
+	line-height: 1.4;
+}
+
+.siege-case-study-ca .siege-case-map.wp-block-image img {
+	border-color: var(--wp--preset--color--line-2);
+}
+
+.siege-case-study-ca .siege-case-map.wp-block-image figcaption {
+	color: var(--wp--preset--color--mono);
+	font-size: 10.5px;
+	letter-spacing: 0.4px;
+}
+
+.siege-map-comparison.wp-block-columns {
+	gap: 20px;
+}
+
+.siege-case-columns.wp-block-columns {
+	align-items: center;
+}
+
+.siege-case-image-pair .wp-block-columns {
+	gap: 20px;
+}
+
+/* ===========================
+   CASE STUDY: RESEARCH CARDS
+   =========================== */
+
+.siege-research-card {
+	border: 1px solid var(--wp--preset--color--line-2);
+	overflow: hidden;
+}
+
+.siege-research-card-header {
+	background: var(--wp--preset--color--card);
+	padding: 22px 28px;
+	border-bottom: 1px solid var(--wp--preset--color--line-2);
+}
+
+.siege-research-card-header h3 {
+	font-family: var(--wp--preset--font-family--archivo);
+	font-weight: 800;
+	font-size: 1.25rem;
+	margin: 0;
+	color: var(--wp--preset--color--ink);
+}
+
+.siege-research-card > div:last-child {
+	padding: 28px;
+}
+
+/* ===========================
+   CASE STUDY: BAR CHART
+   =========================== */
+
+.siege-bar-chart {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.siege-bar-row {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+}
+
+.siege-bar-label {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--mono-dim);
+	flex-shrink: 0;
+	width: 110px;
+	text-align: right;
+}
+
+.siege-bar-track {
+	flex: 1;
+	height: 32px;
+	background: #3a382e;
+	position: relative;
+}
+
+.siege-bar-fill {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	padding: 0 12px;
+	font-family: var(--wp--preset--font-family--archivo);
+	font-weight: 800;
+	font-size: 14px;
+	color: var(--wp--preset--color--paper);
+}
+
+.siege-bar-fill--green {
+	background: var(--wp--preset--color--green-deep);
+}
+
+.siege-bar-fill--rust {
+	background: var(--wp--preset--color--rust);
+}
+
+/* ===========================
+   CASE STUDY: PULLQUOTE
+   =========================== */
+
+.siege-pullquote {
+	border-left: 3px solid var(--wp--preset--color--green-deep);
+	padding-left: 28px;
+}
+
+.siege-pullquote blockquote {
+	margin: 0;
+}
+
+.siege-pullquote blockquote p {
+	font-family: var(--wp--preset--font-family--newsreader);
+	font-style: italic;
+	font-size: 1.35rem;
+	line-height: 1.55;
+	color: var(--wp--preset--color--ink-soft);
+	margin: 0 0 16px;
+}
+
+.siege-pullquote cite {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--mono);
+	font-style: normal;
+}
+
+/* ===========================
+   CASE STUDY: BREADCRUMB
+   =========================== */
+
+.siege-breadcrumb {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--mono);
+}
+
+.siege-breadcrumb a {
+	color: var(--wp--preset--color--mono);
+	text-decoration: none;
+}
+
+.siege-breadcrumb a:hover {
+	color: var(--wp--preset--color--ink);
+}
+
+/* ===========================
+   CASE STUDY: TAG CHIPS (inline)
+   =========================== */
+
+.siege-tag-chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.siege-tag-chips span {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 11px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	padding: 6px 12px;
+	border: 1px solid var(--wp--preset--color--line-3);
+	color: var(--wp--preset--color--ink-muted);
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 900px) {
+	.siege-card-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.siege-card-grid-3 {
+		grid-template-columns: 1fr;
+	}
+
+	.siege-featured-post .wp-block-group.is-layout-flex {
+		flex-direction: column;
+	}
+
+	.siege-featured-post .wp-block-group[style*="selfStretch"] {
+		width: 100%;
+	}
+
+	.siege-service-row {
+		grid-template-columns: 1fr;
+		gap: 24px;
+	}
+
+	.siege-capability-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.siege-process-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.siege-founder-card {
+		grid-template-columns: 1fr;
+	}
+
+	.siege-team-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.siege-testimonial-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.siege-partner-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	/* Case study responsive */
+	.siege-stats-strip {
+		grid-template-columns: 1fr;
+	}
+
+	.siege-step-cards,
+	.siege-step-cards.wp-block-group {
+		grid-template-columns: 1fr;
+	}
+
+	.siege-benefit-strip {
+		grid-template-columns: 1fr;
+		gap: 24px;
+	}
+
+	.siege-lens-grid,
+	.siege-lens-grid.wp-block-columns {
+		grid-template-columns: 1fr;
+	}
+
+	.siege-bar-label {
+		width: 80px;
+		font-size: 11px;
 	}
 }
