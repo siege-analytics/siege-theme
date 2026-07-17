@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+  xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:wp="http://wordpress.org/export/1.2/">
+
+<channel>
+  <title>Siege Analytics</title>
+  <link>https://siegeanalytics.com</link>
+  <description>Spatial intelligence, polling, and data engineering for campaigns, nonprofits, and public-interest organizations.</description>
+  <language>en-US</language>
+  <wp:wxr_version>1.2</wp:wxr_version>
+  <wp:base_site_url>https://siegeanalytics.com</wp:base_site_url>
+  <wp:base_blog_url>https://siegeanalytics.com</wp:base_blog_url>
+
+  <!-- ============================== HOME ============================== -->
+  <item>
+    <title>Home</title>
+    <link>https://siegeanalytics.com/</link>
+    <dc:creator><![CDATA[dheeraj]]></dc:creator>
+    <content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Siege Analytics turns location data into decisions. We build precinct boundaries from raw address files, design polls that treat every community as a first language, and engineer the pipelines that connect field teams to the numbers that matter.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+    <excerpt:encoded><![CDATA[Spatial intelligence, polling, and data engineering for campaigns, nonprofits, and public-interest organizations.]]></excerpt:encoded>
+    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <wp:post_name><![CDATA[home]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+      <wp:meta_value><![CDATA[page-home]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <!-- ============================ SERVICES ============================ -->
+  <item>
+    <title>Services</title>
+    <link>https://siegeanalytics.com/services/</link>
+    <dc:creator><![CDATA[dheeraj]]></dc:creator>
+    <content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Seven practice areas -- fractional CTO, spatial intelligence, polling and research, political financial analysis, data engineering, software engineering, and GIS training -- each grounded in the principle that good decisions start with good geometry.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+    <excerpt:encoded><![CDATA[Fractional CTO, spatial intelligence, polling, data engineering, and more.]]></excerpt:encoded>
+    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <wp:post_name><![CDATA[services]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+      <wp:meta_value><![CDATA[page-services]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <!-- ============================== ABOUT ============================= -->
+  <item>
+    <title>About</title>
+    <link>https://siegeanalytics.com/about/</link>
+    <dc:creator><![CDATA[dheeraj]]></dc:creator>
+    <content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Siege Analytics is a 100% minority-owned data consultancy based in Austin, Texas, working remotely across five continents. Founded by Dheeraj Chand, we specialize in spatial intelligence, polling, and data engineering for campaigns, nonprofits, and public-interest organizations.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+    <excerpt:encoded><![CDATA[100% minority-owned data consultancy based in Austin, Texas. Spatial intelligence, polling, and engineering.]]></excerpt:encoded>
+    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <wp:post_name><![CDATA[about]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+      <wp:meta_value><![CDATA[page-about]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <!-- ============================ CONTACT ============================= -->
+  <item>
+    <title>Contact</title>
+    <link>https://siegeanalytics.com/contact/</link>
+    <dc:creator><![CDATA[dheeraj]]></dc:creator>
+    <content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Every engagement starts with a scoping conversation -- no deck, no pitch. You describe the decision you are trying to make; we tell you honestly whether a spatial, statistical, or engineering approach fits, and what it would take.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+    <excerpt:encoded><![CDATA[Start a scoping conversation. No deck, no pitch.]]></excerpt:encoded>
+    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <wp:post_name><![CDATA[contact]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+      <wp:meta_value><![CDATA[page-contact]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <!-- ====================== CASE STUDY: GEORGIA ====================== -->
+  <item>
+    <title>Georgia Runoffs</title>
+    <link>https://siegeanalytics.com/work/georgia-runoffs/</link>
+    <dc:creator><![CDATA[dheeraj]]></dc:creator>
+    <content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>In the 2021 Georgia Senate runoffs, Siege Analytics built a statewide spatial targeting model for AAPI Victory Fund that identified 65,000 persuadable AAPI voters across all 159 counties. The model produced a 2.9x turnout lift over untargeted outreach.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+    <excerpt:encoded><![CDATA[Statewide spatial targeting for AAPI Victory Fund in the 2021 Georgia Senate runoffs.]]></excerpt:encoded>
+    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <wp:post_name><![CDATA[georgia-runoffs]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+      <wp:meta_value><![CDATA[page-georgia-runoffs]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <!-- ================= CASE STUDY: BOUNDARY ESTIMATION ================ -->
+  <item>
+    <title>Boundary Estimation</title>
+    <link>https://siegeanalytics.com/work/boundary-estimation/</link>
+    <dc:creator><![CDATA[dheeraj]]></dc:creator>
+    <content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Most states do not publish precinct boundaries as shapefiles. Siege Analytics reconstructs them from raw voter-file addresses using a three-phase pipeline: geocode, cluster, and estimate polygons. The result is a set of estimated precinct boundaries accurate enough for campaign targeting, resource allocation, and election-night reporting.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+    <excerpt:encoded><![CDATA[Reconstructing precinct boundaries from raw voter-file addresses when official shapefiles do not exist.]]></excerpt:encoded>
+    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <wp:post_name><![CDATA[boundary-estimation]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+      <wp:meta_value><![CDATA[page-boundary-estimation]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <!-- ================ CASE STUDY: POLLING AS ETHNOGRAPHY ============== -->
+  <item>
+    <title>Polling as Ethnography</title>
+    <link>https://siegeanalytics.com/work/polling-as-ethnography/</link>
+    <dc:creator><![CDATA[dheeraj]]></dc:creator>
+    <content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Traditional polling treats respondents as interchangeable data points. Siege Analytics treats every community as a first language -- designing instruments, sampling frames, and fieldwork protocols that respect how people actually talk about politics, place, and power.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+    <excerpt:encoded><![CDATA[Designing polls that treat every community as a first language.]]></excerpt:encoded>
+    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <wp:post_name><![CDATA[polling-as-ethnography]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:postmeta>
+      <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+      <wp:meta_value><![CDATA[page-polling-ethnography]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+</channel>
+</rss>
