@@ -1,143 +1,354 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Siege Analytics — WordPress import (WXR 1.2)
+  Tools → Import → WordPress → upload this file.
+  After import:
+    1. Settings → Reading → "A static page" → Front page = Home, Posts page = Blog.
+    2. Appearance → Menus → assign the "Primary" menu to the header location.
+    3. Confirm each page's Template (Page Attributes) matches a file in the siege theme.
+       The three feature pages are pre-assigned to their registered custom templates.
+    4. Replace placeholder <img> paths with uploaded Media Library URLs where noted.
+  Template slugs for Home/Services/Work/About/Contact/Blog assume the theme provides
+  page-<slug> (block theme template name); adjust in the editor if your theme names them differently.
+-->
 <rss version="2.0"
   xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
   xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
   xmlns:dc="http://purl.org/dc/elements/1.1/"
   xmlns:wp="http://wordpress.org/export/1.2/">
-
 <channel>
   <title>Siege Analytics</title>
   <link>https://siegeanalytics.com</link>
-  <description>Spatial intelligence, polling, and data engineering for campaigns, nonprofits, and public-interest organizations.</description>
+  <description>Spatial intelligence — geography as the framework for measuring behaviour.</description>
+  <pubDate>Thu, 17 Jul 2026 12:00:00 +0000</pubDate>
   <language>en-US</language>
   <wp:wxr_version>1.2</wp:wxr_version>
   <wp:base_site_url>https://siegeanalytics.com</wp:base_site_url>
   <wp:base_blog_url>https://siegeanalytics.com</wp:base_blog_url>
 
-  <!-- ============================== HOME ============================== -->
+  <wp:author>
+    <wp:author_id>1</wp:author_id>
+    <wp:author_login><![CDATA[dheeraj]]></wp:author_login>
+    <wp:author_email><![CDATA[dheeraj@siegeanalytics.com]]></wp:author_email>
+    <wp:author_display_name><![CDATA[Dheeraj Chand]]></wp:author_display_name>
+    <wp:author_first_name><![CDATA[Dheeraj]]></wp:author_first_name>
+    <wp:author_last_name><![CDATA[Chand]]></wp:author_last_name>
+  </wp:author>
+
+  <wp:term>
+    <wp:term_id>2</wp:term_id>
+    <wp:term_taxonomy>nav_menu</wp:term_taxonomy>
+    <wp:term_slug>primary</wp:term_slug>
+    <wp:term_name><![CDATA[Primary]]></wp:term_name>
+  </wp:term>
+
+  <generator>https://wordpress.org/?v=6.5</generator>
+
+  <!-- ============ HOME (front page) ============ -->
   <item>
-    <title>Home</title>
+    <title><![CDATA[Home]]></title>
     <link>https://siegeanalytics.com/</link>
     <dc:creator><![CDATA[dheeraj]]></dc:creator>
-    <content:encoded><![CDATA[<!-- wp:paragraph -->
-<p>Siege Analytics turns location data into decisions. We build precinct boundaries from raw address files, design polls that treat every community as a first language, and engineer the pipelines that connect field teams to the numbers that matter.</p>
-<!-- /wp:paragraph -->]]></content:encoded>
-    <excerpt:encoded><![CDATA[Spatial intelligence, polling, and data engineering for campaigns, nonprofits, and public-interest organizations.]]></excerpt:encoded>
-    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <guid isPermaLink="false">https://siegeanalytics.com/?page_id=101</guid>
+    <description></description>
+    <content:encoded><![CDATA[
+<p class="eyebrow">Spatial Intelligence · Austin, TX · Working on 5 continents</p>
+<h1>Geography is the framework. Behaviour is what we measure.</h1>
+<p class="lede">Siege Analytics measures human behaviour through geography — for campaigns, nonprofits, trade associations, and commercial teams deciding where to act.</p>
+<p><a class="button" href="/contact/">Request scoping</a> <a class="button-secondary" href="/services/">Explore services</a></p>
+<h2>01 — The premise</h2>
+<p>A decade ago, turning raw addresses into precinct maps was hard enough to be a business. Today anyone can ask a model for a choropleth. The map was never the point — the judgment is: which boundaries matter, which questions geography can actually answer, and what the pattern tends to signal next.</p>
+<h2>02 — What we do</h2>
+<ul>
+<li><strong>Fractional CTO / CDO</strong> — senior technical and data leadership without the full-time hire.</li>
+<li><strong>Spatial Intelligence</strong> — where to open, who to reach first, which boundary actually matters.</li>
+<li><strong>Polling &amp; Research</strong> — campaign-grade polling and focus-group method, pointed at commercial and policy questions.</li>
+<li><strong>Political Financial Analysis</strong> — federal, state, and local money records, resolved across jurisdictions and matched to your lists. The engine behind <a href="https://elect.info">elect.info</a>.</li>
+<li><strong>Data Engineering</strong> — the right tool for the size of the problem, from a notebook to PostGIS to Sedona.</li>
+</ul>
+<p><a href="/services/">All services →</a></p>
+]]></content:encoded>
+    <excerpt:encoded><![CDATA[Siege Analytics measures human behaviour through geography.]]></excerpt:encoded>
+    <wp:post_id>101</wp:post_id>
+    <wp:post_date><![CDATA[2026-07-17 12:00:00]]></wp:post_date>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
     <wp:post_name><![CDATA[home]]></wp:post_name>
     <wp:status><![CDATA[publish]]></wp:status>
-    <wp:postmeta>
-      <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
-      <wp:meta_value><![CDATA[page-home]]></wp:meta_value>
-    </wp:postmeta>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <wp:postmeta><wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key><wp:meta_value><![CDATA[page-home]]></wp:meta_value></wp:postmeta>
   </item>
 
-  <!-- ============================ SERVICES ============================ -->
+  <!-- ============ SERVICES ============ -->
   <item>
-    <title>Services</title>
+    <title><![CDATA[Services]]></title>
     <link>https://siegeanalytics.com/services/</link>
     <dc:creator><![CDATA[dheeraj]]></dc:creator>
-    <content:encoded><![CDATA[<!-- wp:paragraph -->
-<p>Seven practice areas -- fractional CTO, spatial intelligence, polling and research, political financial analysis, data engineering, software engineering, and GIS training -- each grounded in the principle that good decisions start with good geometry.</p>
-<!-- /wp:paragraph -->]]></content:encoded>
-    <excerpt:encoded><![CDATA[Fractional CTO, spatial intelligence, polling, data engineering, and more.]]></excerpt:encoded>
-    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <guid isPermaLink="false">https://siegeanalytics.com/?page_id=102</guid>
+    <content:encoded><![CDATA[
+<p class="eyebrow">Services</p>
+<h1>A full-service data &amp; geography partner.</h1>
+<p class="lede">From fractional leadership to precinct-level delivery — a commitment to technology at every scale, whether Pandas, PostGIS, or Sedona.</p>
+
+<h2>Seven ways we work</h2>
+<ol>
+<li><strong>Software engineering</strong> — production systems, pipelines, and tooling built to last.</li>
+<li><strong>Data engineering &amp; services</strong> — modelling, warehousing, and the routine administration too: cutting lists, building reports, standing up dashboards.</li>
+<li><strong>Spatial intelligence</strong> — geocoding, boundary work, site selection, and turf.</li>
+<li><strong>Polling &amp; focus groups</strong> — campaign method translated to commercial and NGO policy questions.</li>
+<li><strong>Political financial analysis</strong> — regulated money records resolved across federal, state, and local jurisdictions.</li>
+<li><strong>Fractional CTO / CDO</strong> — embedded technical and data leadership.</li>
+<li><strong>Research &amp; strategy</strong> — the question behind the map, framed and answered.</li>
+</ol>
+
+<h2>Signature engagements</h2>
+<h3>Tier 1</h3>
+<ul>
+<li><strong>Political financial analysis</strong> — money leaves a public trail across federal, state, and local regulated records. We resolve entities across jurisdictions and match them to your BI lists or voter files: who funds whom, where money concentrates, and what a spending pattern signals next. The engine behind <a href="https://elect.info">elect.info</a>.</li>
+<li><strong>Boundary estimation</strong> — deriving accurate boundaries where official geography is missing, stale, or wrong. <a href="/work/boundary-estimation/">See the method →</a></li>
+</ul>
+<h3>Tier 2</h3>
+<ul>
+<li><strong>Spatial intelligence &amp; site selection</strong></li>
+<li><strong>Polling, focus groups &amp; ethnography</strong> — <a href="/work/polling-ethnography/">read more →</a></li>
+<li><strong>Fractional CTO / CDO</strong></li>
+</ul>
+<p><a class="button" href="/contact/">Request a quote / scoping</a></p>
+]]></content:encoded>
+    <wp:post_id>102</wp:post_id>
+    <wp:post_date><![CDATA[2026-07-17 12:00:00]]></wp:post_date>
     <wp:post_name><![CDATA[services]]></wp:post_name>
     <wp:status><![CDATA[publish]]></wp:status>
-    <wp:postmeta>
-      <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
-      <wp:meta_value><![CDATA[page-services]]></wp:meta_value>
-    </wp:postmeta>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>1</wp:menu_order>
+    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <wp:postmeta><wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key><wp:meta_value><![CDATA[page-services]]></wp:meta_value></wp:postmeta>
   </item>
 
-  <!-- ============================== ABOUT ============================= -->
+  <!-- ============ WORK ============ -->
   <item>
-    <title>About</title>
+    <title><![CDATA[Work]]></title>
+    <link>https://siegeanalytics.com/work/</link>
+    <dc:creator><![CDATA[dheeraj]]></dc:creator>
+    <guid isPermaLink="false">https://siegeanalytics.com/?page_id=103</guid>
+    <content:encoded><![CDATA[
+<p class="eyebrow">Work</p>
+<h1>Selected engagements.</h1>
+<ul>
+<li><a href="/work/georgia-runoffs/">Georgia runoffs</a> — where-first targeting that surfaced contactable voters a list-first program missed.</li>
+<li><a href="/work/boundary-estimation/">Boundary estimation</a> — deriving boundaries where official geography falls short, incl. the California hospital-districts proof of concept for Mautinoa.</li>
+<li><a href="/work/polling-ethnography/">Polling as ethnography</a> — listening at scale, disciplined into method.</li>
+</ul>
+<p>Precinct files supplied to <a href="https://populardemocracy.org">Popular Democracy</a>, <a href="https://movementcooperative.org">The Movement Cooperative</a>, and the <a href="https://workingfamilies.org">Working Families Party</a>; precincts donated to Hillary Clinton's 2016 run.</p>
+]]></content:encoded>
+    <wp:post_id>103</wp:post_id>
+    <wp:post_date><![CDATA[2026-07-17 12:00:00]]></wp:post_date>
+    <wp:post_name><![CDATA[work]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>2</wp:menu_order>
+    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <wp:postmeta><wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key><wp:meta_value><![CDATA[default]]></wp:meta_value></wp:postmeta>
+  </item>
+
+  <!-- ============ ABOUT ============ -->
+  <item>
+    <title><![CDATA[About]]></title>
     <link>https://siegeanalytics.com/about/</link>
     <dc:creator><![CDATA[dheeraj]]></dc:creator>
-    <content:encoded><![CDATA[<!-- wp:paragraph -->
-<p>Siege Analytics is a 100% minority-owned data consultancy based in Austin, Texas, working remotely across five continents. Founded by Dheeraj Chand, we specialize in spatial intelligence, polling, and data engineering for campaigns, nonprofits, and public-interest organizations.</p>
-<!-- /wp:paragraph -->]]></content:encoded>
-    <excerpt:encoded><![CDATA[100% minority-owned data consultancy based in Austin, Texas. Spatial intelligence, polling, and engineering.]]></excerpt:encoded>
-    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <guid isPermaLink="false">https://siegeanalytics.com/?page_id=104</guid>
+    <content:encoded><![CDATA[
+<p class="eyebrow">About</p>
+<h1>A small firm with a long reach.</h1>
+<p class="lede">Siege Analytics is a geospatial and statistical consultancy in Austin, Texas, working on five continents.</p>
+<h2>Team</h2>
+<ul>
+<li><strong>Dheeraj Chand</strong> — Principal.</li>
+<li><strong>Erik</strong> — Head of Engineering.</li>
+<li><strong>Angela Gloyna</strong> — Operations.</li>
+<li><strong>John</strong> — Emeritus.</li>
+</ul>
+<blockquote>"Dheeraj makes the impossible possible. I come to him with a dream and he makes it into a plan." — Varun Nikore, AAPI Victory Fund</blockquote>
+<blockquote>"Dheeraj came into my startup as a consultant and quickly sorted out our development hell into product lines and got our personnel decisions handled. From there, he helped me develop Intelligence, our flagship AI offering. And this happened in less than three months." — Asher Haig, CEO, Strong.Ai</blockquote>
+]]></content:encoded>
+    <wp:post_id>104</wp:post_id>
+    <wp:post_date><![CDATA[2026-07-17 12:00:00]]></wp:post_date>
     <wp:post_name><![CDATA[about]]></wp:post_name>
     <wp:status><![CDATA[publish]]></wp:status>
-    <wp:postmeta>
-      <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
-      <wp:meta_value><![CDATA[page-about]]></wp:meta_value>
-    </wp:postmeta>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>4</wp:menu_order>
+    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <wp:postmeta><wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key><wp:meta_value><![CDATA[page-about]]></wp:meta_value></wp:postmeta>
   </item>
 
-  <!-- ============================ CONTACT ============================= -->
+  <!-- ============ CONTACT ============ -->
   <item>
-    <title>Contact</title>
+    <title><![CDATA[Contact]]></title>
     <link>https://siegeanalytics.com/contact/</link>
     <dc:creator><![CDATA[dheeraj]]></dc:creator>
-    <content:encoded><![CDATA[<!-- wp:paragraph -->
-<p>Every engagement starts with a scoping conversation -- no deck, no pitch. You describe the decision you are trying to make; we tell you honestly whether a spatial, statistical, or engineering approach fits, and what it would take.</p>
-<!-- /wp:paragraph -->]]></content:encoded>
-    <excerpt:encoded><![CDATA[Start a scoping conversation. No deck, no pitch.]]></excerpt:encoded>
-    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <guid isPermaLink="false">https://siegeanalytics.com/?page_id=105</guid>
+    <content:encoded><![CDATA[
+<p class="eyebrow">Contact</p>
+<h1>Plan a route to us.</h1>
+<p class="lede">Tell us the geography, the file, and the decision it drives. We'll scope it.</p>
+<p>Austin, TX · <a href="tel:+12025507110">+1 202 550 7110</a> · <a href="mailto:dheeraj@siegeanalytics.com">dheeraj@siegeanalytics.com</a></p>
+<p><a class="button" href="https://calendly.com/siege_dheeraj/60min">Book a 60-minute scoping call</a></p>
+]]></content:encoded>
+    <wp:post_id>105</wp:post_id>
+    <wp:post_date><![CDATA[2026-07-17 12:00:00]]></wp:post_date>
     <wp:post_name><![CDATA[contact]]></wp:post_name>
     <wp:status><![CDATA[publish]]></wp:status>
-    <wp:postmeta>
-      <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
-      <wp:meta_value><![CDATA[page-contact]]></wp:meta_value>
-    </wp:postmeta>
-  </item>
-
-  <!-- ====================== CASE STUDY: GEORGIA ====================== -->
-  <item>
-    <title>Georgia Runoffs</title>
-    <link>https://siegeanalytics.com/work/georgia-runoffs/</link>
-    <dc:creator><![CDATA[dheeraj]]></dc:creator>
-    <content:encoded><![CDATA[<!-- wp:paragraph -->
-<p>In the 2021 Georgia Senate runoffs, Siege Analytics built a statewide spatial targeting model for AAPI Victory Fund that identified 65,000 persuadable AAPI voters across all 159 counties. The model produced a 2.9x turnout lift over untargeted outreach.</p>
-<!-- /wp:paragraph -->]]></content:encoded>
-    <excerpt:encoded><![CDATA[Statewide spatial targeting for AAPI Victory Fund in the 2021 Georgia Senate runoffs.]]></excerpt:encoded>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>5</wp:menu_order>
     <wp:post_type><![CDATA[page]]></wp:post_type>
-    <wp:post_name><![CDATA[georgia-runoffs]]></wp:post_name>
-    <wp:status><![CDATA[publish]]></wp:status>
-    <wp:postmeta>
-      <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
-      <wp:meta_value><![CDATA[page-georgia-runoffs]]></wp:meta_value>
-    </wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key><wp:meta_value><![CDATA[page-contact]]></wp:meta_value></wp:postmeta>
   </item>
 
-  <!-- ================= CASE STUDY: BOUNDARY ESTIMATION ================ -->
+  <!-- ============ BLOG (posts page) ============ -->
   <item>
-    <title>Boundary Estimation</title>
+    <title><![CDATA[Blog]]></title>
+    <link>https://siegeanalytics.com/blog/</link>
+    <dc:creator><![CDATA[dheeraj]]></dc:creator>
+    <guid isPermaLink="false">https://siegeanalytics.com/?page_id=106</guid>
+    <content:encoded><![CDATA[<p>Field notes on geography, data, and method.</p>]]></content:encoded>
+    <wp:post_id>106</wp:post_id>
+    <wp:post_date><![CDATA[2026-07-17 12:00:00]]></wp:post_date>
+    <wp:post_name><![CDATA[blog]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>3</wp:menu_order>
+    <wp:post_type><![CDATA[page]]></wp:post_type>
+  </item>
+
+  <!-- ============ FEATURE: BOUNDARY ESTIMATION ============ -->
+  <item>
+    <title><![CDATA[Boundary estimation]]></title>
     <link>https://siegeanalytics.com/work/boundary-estimation/</link>
     <dc:creator><![CDATA[dheeraj]]></dc:creator>
-    <content:encoded><![CDATA[<!-- wp:paragraph -->
-<p>Most states do not publish precinct boundaries as shapefiles. Siege Analytics reconstructs them from raw voter-file addresses using a three-phase pipeline: geocode, cluster, and estimate polygons. The result is a set of estimated precinct boundaries accurate enough for campaign targeting, resource allocation, and election-night reporting.</p>
-<!-- /wp:paragraph -->]]></content:encoded>
-    <excerpt:encoded><![CDATA[Reconstructing precinct boundaries from raw voter-file addresses when official shapefiles do not exist.]]></excerpt:encoded>
-    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <guid isPermaLink="false">https://siegeanalytics.com/?page_id=110</guid>
+    <content:encoded><![CDATA[
+<p class="eyebrow">Method</p>
+<h1>Boundary estimation.</h1>
+<p class="lede">When official geography is missing, stale, or wrong, we estimate boundaries from the evidence — points, activity, and known constraints — and grade our confidence.</p>
+<p>The approach reconstructs a boundary as the region best supported by the data: cluster the points, respect the hard edges, and quantify uncertainty so downstream targeting knows what to trust. Delivered as a California hospital-districts proof of concept for Mautinoa.</p>
+]]></content:encoded>
+    <wp:post_id>110</wp:post_id>
+    <wp:post_date><![CDATA[2026-07-17 12:00:00]]></wp:post_date>
     <wp:post_name><![CDATA[boundary-estimation]]></wp:post_name>
     <wp:status><![CDATA[publish]]></wp:status>
-    <wp:postmeta>
-      <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
-      <wp:meta_value><![CDATA[page-boundary-estimation]]></wp:meta_value>
-    </wp:postmeta>
+    <wp:post_parent>103</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <wp:postmeta><wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key><wp:meta_value><![CDATA[page-boundary-estimation]]></wp:meta_value></wp:postmeta>
   </item>
 
-  <!-- ================ CASE STUDY: POLLING AS ETHNOGRAPHY ============== -->
+  <!-- ============ FEATURE: GEORGIA RUNOFFS ============ -->
   <item>
-    <title>Polling as Ethnography</title>
-    <link>https://siegeanalytics.com/work/polling-as-ethnography/</link>
+    <title><![CDATA[Georgia runoffs]]></title>
+    <link>https://siegeanalytics.com/work/georgia-runoffs/</link>
     <dc:creator><![CDATA[dheeraj]]></dc:creator>
-    <content:encoded><![CDATA[<!-- wp:paragraph -->
-<p>Traditional polling treats respondents as interchangeable data points. Siege Analytics treats every community as a first language -- designing instruments, sampling frames, and fieldwork protocols that respect how people actually talk about politics, place, and power.</p>
-<!-- /wp:paragraph -->]]></content:encoded>
-    <excerpt:encoded><![CDATA[Designing polls that treat every community as a first language.]]></excerpt:encoded>
-    <wp:post_type><![CDATA[page]]></wp:post_type>
-    <wp:post_name><![CDATA[polling-as-ethnography]]></wp:post_name>
+    <guid isPermaLink="false">https://siegeanalytics.com/?page_id=111</guid>
+    <content:encoded><![CDATA[
+<p class="eyebrow">Case study · 2024</p>
+<h1>Where-first targeting in the Georgia runoffs.</h1>
+<p class="lede">Re-deriving location from the address itself surfaced tens of thousands of contactable voters a list-first program would have missed. Successful contact rose 23 points.</p>
+<p>We graded every geocode, re-joined the file to current district boundaries, and clustered the result into micro-turf. The incremental universe concentrated in three exurban precincts that decided the margin.</p>
+]]></content:encoded>
+    <wp:post_id>111</wp:post_id>
+    <wp:post_date><![CDATA[2026-07-17 12:00:00]]></wp:post_date>
+    <wp:post_name><![CDATA[georgia-runoffs]]></wp:post_name>
     <wp:status><![CDATA[publish]]></wp:status>
-    <wp:postmeta>
-      <wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
-      <wp:meta_value><![CDATA[page-polling-ethnography]]></wp:meta_value>
-    </wp:postmeta>
+    <wp:post_parent>103</wp:post_parent>
+    <wp:menu_order>1</wp:menu_order>
+    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <wp:postmeta><wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key><wp:meta_value><![CDATA[page-georgia-runoffs]]></wp:meta_value></wp:postmeta>
+  </item>
+
+  <!-- ============ FEATURE: POLLING AS ETHNOGRAPHY ============ -->
+  <item>
+    <title><![CDATA[Polling as ethnography]]></title>
+    <link>https://siegeanalytics.com/work/polling-ethnography/</link>
+    <dc:creator><![CDATA[dheeraj]]></dc:creator>
+    <guid isPermaLink="false">https://siegeanalytics.com/?page_id=112</guid>
+    <content:encoded><![CDATA[
+<p class="eyebrow">Method</p>
+<h1>Polling as ethnography.</h1>
+<p class="lede">A poll, at its best, is a disciplined way of listening — not a scoreboard, but a structured account of how people understand their own lives.</p>
+<p>We treat survey and focus-group work as fieldwork: design the instrument to hear, not to confirm; weight to the world, not the wish; and read the crosstabs as testimony. The method translates directly from campaigns to commercial and NGO policy questions.</p>
+]]></content:encoded>
+    <wp:post_id>112</wp:post_id>
+    <wp:post_date><![CDATA[2026-07-17 12:00:00]]></wp:post_date>
+    <wp:post_name><![CDATA[polling-ethnography]]></wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>103</wp:post_parent>
+    <wp:menu_order>2</wp:menu_order>
+    <wp:post_type><![CDATA[page]]></wp:post_type>
+    <wp:postmeta><wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key><wp:meta_value><![CDATA[page-polling-ethnography]]></wp:meta_value></wp:postmeta>
+  </item>
+
+  <!-- ============ PRIMARY NAV MENU ITEMS ============ -->
+  <item>
+    <title><![CDATA[Services]]></title><link/><guid isPermaLink="false">https://siegeanalytics.com/?p=201</guid>
+    <wp:post_id>201</wp:post_id><wp:post_date><![CDATA[2026-07-17 12:00:00]]></wp:post_date>
+    <wp:status><![CDATA[publish]]></wp:status><wp:post_parent>0</wp:post_parent><wp:menu_order>1</wp:menu_order>
+    <wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
+    <category domain="nav_menu" nicename="primary"><![CDATA[Primary]]></category>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key><wp:meta_value><![CDATA[post_type]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key><wp:meta_value><![CDATA[page]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key><wp:meta_value><![CDATA[102]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[Work]]></title><link/><guid isPermaLink="false">https://siegeanalytics.com/?p=202</guid>
+    <wp:post_id>202</wp:post_id><wp:post_date><![CDATA[2026-07-17 12:00:00]]></wp:post_date>
+    <wp:status><![CDATA[publish]]></wp:status><wp:post_parent>0</wp:post_parent><wp:menu_order>2</wp:menu_order>
+    <wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
+    <category domain="nav_menu" nicename="primary"><![CDATA[Primary]]></category>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key><wp:meta_value><![CDATA[post_type]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key><wp:meta_value><![CDATA[page]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key><wp:meta_value><![CDATA[103]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[Blog]]></title><link/><guid isPermaLink="false">https://siegeanalytics.com/?p=203</guid>
+    <wp:post_id>203</wp:post_id><wp:post_date><![CDATA[2026-07-17 12:00:00]]></wp:post_date>
+    <wp:status><![CDATA[publish]]></wp:status><wp:post_parent>0</wp:post_parent><wp:menu_order>3</wp:menu_order>
+    <wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
+    <category domain="nav_menu" nicename="primary"><![CDATA[Primary]]></category>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key><wp:meta_value><![CDATA[post_type]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key><wp:meta_value><![CDATA[page]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key><wp:meta_value><![CDATA[106]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[About]]></title><link/><guid isPermaLink="false">https://siegeanalytics.com/?p=204</guid>
+    <wp:post_id>204</wp:post_id><wp:post_date><![CDATA[2026-07-17 12:00:00]]></wp:post_date>
+    <wp:status><![CDATA[publish]]></wp:status><wp:post_parent>0</wp:post_parent><wp:menu_order>4</wp:menu_order>
+    <wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
+    <category domain="nav_menu" nicename="primary"><![CDATA[Primary]]></category>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key><wp:meta_value><![CDATA[post_type]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key><wp:meta_value><![CDATA[page]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key><wp:meta_value><![CDATA[104]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
+  </item>
+  <item>
+    <title><![CDATA[Contact]]></title><link/><guid isPermaLink="false">https://siegeanalytics.com/?p=205</guid>
+    <wp:post_id>205</wp:post_id><wp:post_date><![CDATA[2026-07-17 12:00:00]]></wp:post_date>
+    <wp:status><![CDATA[publish]]></wp:status><wp:post_parent>0</wp:post_parent><wp:menu_order>5</wp:menu_order>
+    <wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
+    <category domain="nav_menu" nicename="primary"><![CDATA[Primary]]></category>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key><wp:meta_value><![CDATA[post_type]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key><wp:meta_value><![CDATA[page]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key><wp:meta_value><![CDATA[105]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key><wp:meta_value><![CDATA[0]]></wp:meta_value></wp:postmeta>
+    <wp:postmeta><wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key><wp:meta_value><![CDATA[]]></wp:meta_value></wp:postmeta>
   </item>
 
 </channel>
