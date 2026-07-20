@@ -20,20 +20,20 @@ The mark abstracts *siege* as **encirclement** — a position cut off and pinned
 
 | Version | File | Use |
 |---------|------|-----|
-| **Primary** (with graticule ticks) | `logo/siege-mark.svg` | Everywhere ≥ 24px: header, deck covers, letterhead, large avatars |
-| **Fallback** (pure frame, no ticks) | `logo/siege-mark-fallback.svg` | Below 24px: favicon, small UI. Ticks blur together at tiny sizes, so they are dropped |
+| **Primary** (with graticule ticks) | `assets/images/logo/siege-mark.svg` | Everywhere >= 24px: header, deck covers, letterhead, large avatars |
+| **Fallback** (pure frame, no ticks) | `assets/images/logo/siege-mark-fallback.svg` | Below 24px: favicon, small UI. Ticks blur together at tiny sizes, so they are dropped |
 
 ### Color variants
 | File | Description |
 |------|-------------|
-| `logo/siege-mark.svg` | Primary — green frame/ring (`#3c5a3a`), rust dot (`#b9762f`). For paper/light backgrounds. |
-| `logo/siege-mark-pale.svg` | Pale green (`#dee5b8`) frame/ring for **dark** (ink) backgrounds. |
-| `logo/siege-mark-reverse.svg` | Reversed treatment for dark sections. |
-| `logo/siege-mark-black.svg` | Single-color black — one-color print, faxes, stamps. |
-| `logo/siege-mark-white.svg` | Single-color white — dark photography, merch. |
+| `assets/images/logo/siege-mark.svg` | Primary -- green frame/ring (`#3c5a3a`), rust dot (`#b9762f`). For paper/light backgrounds. |
+| `assets/images/logo/siege-mark-pale.svg` | Pale green (`#dee5b8`) frame/ring for **dark** (ink) backgrounds. |
+| `assets/images/logo/siege-mark-reverse.svg` | Reversed treatment for dark sections. |
+| `assets/images/logo/siege-mark-black.svg` | Single-color black -- one-color print, faxes, stamps. |
+| `assets/images/logo/siege-mark-white.svg` | Single-color white -- dark photography, merch. |
 
 ### Favicons / app icons
-`logo/favicon-16.png`, `-32`, `-48`, `-64`, `apple-touch-icon-180.png`, `icon-512-maskable.png`. The 16/32 use the **fallback** geometry.
+See the Favicons table in the Asset Inventory below. The 16/32 use the **fallback** geometry.
 
 ### Lockups
 - **Horizontal:** mark + `SIEGE` (Archivo 800) / `ANALYTICS` (Archivo 500, `#3a382e`, `letter-spacing:1px`) stacked to the right of the mark.
@@ -147,4 +147,67 @@ Keep it structural and sparse. The motif organizes; it does not fill space.
 
 ---
 
-*Assets referenced above live in `logo/` alongside this file. Colors and type are wired into `theme.json` per the main `README.md` handoff.*
+---
+
+## 7. Asset Inventory
+
+### Logo SVGs (`assets/images/logo/`)
+
+| File                          | Description                                      |
+|-------------------------------|--------------------------------------------------|
+| `siege-mark.svg`              | Primary mark -- green frame/ring, rust dot        |
+| `siege-mark-pale.svg`         | Pale green for dark backgrounds                   |
+| `siege-mark-reverse.svg`      | Reversed treatment for dark sections              |
+| `siege-mark-black.svg`        | Single-color black -- one-color print             |
+| `siege-mark-white.svg`        | Single-color white -- dark photography, merch     |
+| `siege-mark-fallback.svg`     | No graticule ticks -- for sizes below 24px        |
+| `siege-mark-1024.png`         | Raster primary mark at 1024px                     |
+
+### Brand primitives (`assets/images/brand/`)
+
+| File                          | Description                                      |
+|-------------------------------|--------------------------------------------------|
+| `siege-mark-primary.svg`      | Primary mark (canonical source)                   |
+| `siege-mark-reversed.svg`     | Reversed                                          |
+| `siege-mark-pale.svg`         | Pale green variant                                |
+| `siege-mark-mono-ink.svg`     | Monochrome ink                                    |
+| `siege-mark-mono-white.svg`   | Monochrome white                                  |
+| `siege-mark-fallback.svg`     | Fallback (no ticks)                               |
+| `siege-mark-fallback-ink.svg` | Fallback in ink                                   |
+| `primitive-frame.svg`         | Map frame primitive -- reusable graphic motif     |
+| `primitive-benchmark.svg`     | Benchmark/point-in-circle primitive               |
+| `primitive-graticule.svg`     | Graticule ticks primitive                         |
+
+### Raster exports (`assets/images/brand/png/`)
+
+| File                          | Sizes                                            |
+|-------------------------------|--------------------------------------------------|
+| `siege-mark-primary-*.png`    | 64, 128, 256, 512, 1024                          |
+| `siege-mark-mono-ink-*.png`   | 256, 512, 1024                                   |
+| `siege-mark-reversed-*.png`   | 256, 512, 1024                                   |
+| `avatar-green.png`            | Green background avatar                           |
+| `avatar-ink.png`              | Ink background avatar                             |
+| `avatar-paper.png`            | Paper background avatar                           |
+
+### Favicons (`assets/images/logo/`)
+
+| File                          | Size  | Note                                   |
+|-------------------------------|-------|----------------------------------------|
+| `favicon-16.png`              | 16px  | Fallback geometry (no ticks)           |
+| `favicon-32.png`              | 32px  | Fallback geometry                      |
+| `favicon-48.png`              | 48px  | Primary geometry                       |
+| `favicon-64.png`              | 64px  | Primary geometry                       |
+| `apple-touch-icon-180.png`    | 180px | iOS home screen                        |
+| `icon-512-maskable.png`       | 512px | PWA maskable                           |
+
+### Fonts (`assets/fonts/`)
+
+| Family           | Weights                            | Format |
+|------------------|------------------------------------|--------|
+| Archivo          | 500, 600, 700, 800, 900           | woff2  |
+| Newsreader       | 300, 400, 400i, 500, 500i, 600    | woff2  |
+| Spline Sans Mono | 400, 500, 600                      | woff2  |
+
+---
+
+*Colors and type are wired into `theme.json` per the main `README.md` handoff.*
